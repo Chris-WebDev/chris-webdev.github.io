@@ -88,7 +88,7 @@ code.tan001 {
 }
 
 .code-card::before {
-  background-image: url('http://localhost/git2025/uploads/images/icon/small-logo.png'); /* Replace with your image path */
+  background-image: url('https://chris-webdev.github.io/uploads/images/icon/small-logo.png'); /* Replace with your image path */
   background-size: 200px; /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
