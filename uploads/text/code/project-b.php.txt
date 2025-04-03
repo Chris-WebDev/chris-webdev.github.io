@@ -1,0 +1,17 @@
+<pre class="code-block" style="width: 100%;">
+  &lt;?php
+  <code class="tan001">session_start</code><code>()</code>;
+
+  <code class="outY01">$membersArray</code> <code class="tan001">=</code> <code class="tan001">array</code><code>(</code>
+    <code class="tan001">array</code><code>(</code>
+      <code class="orng01">'fn'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memfn'</code><code>]</code><code>,</code>
+      ...
+    <code>)</code>
+  <code>)</code>;  <code class="gren01">/*end of user inputs*/</code>
+
+  <code class="insP01\">for</code> ...
+  <code>}</code>
+
+  <code class="outY01">$_SESSION</code><code>[</code><code class="orng01\">'player'</code><code>]</code> <code class="tan001\">=</code> <code class="outY01">$membersArray</code><code>;</code>
+?>
+</pre>

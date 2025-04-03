@@ -1,0 +1,256 @@
+/* ... other CSS ... */
+
+.radial72 .about-wrapper {
+    display: flex; /* Revert to block display to maintain original layout */
+    overflow: auto; /* To contain floated elements */
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.radial72 .about-wrapper h1 {
+    float: left;
+    margin-right: 20px;
+}
+
+.radial72 .about-wrapper p {
+    float: left;
+    max-width: 300px;
+}
+
+.cust-slider-wrapper {
+    overflow: hidden; /* Hide overflowing side images */
+    width: calc(100% - 220px);
+    margin-left: 102px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between; /* Center the active image */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cust-slider {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out; /* For smooth sliding if you add JS */
+    width: 100%;
+    justify-content: space-between;
+}
+
+.image-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.image-list li {
+    margin: 0 10px;
+    cursor: pointer;
+}
+.image-list li img {
+    width: 50px; /* Adjust thumbnail size */
+    height: auto;
+    opacity: 0.6;
+    border: 2px solid transparent; /* For active state border */
+    transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.image-list li:hover img {
+    opacity: 0.8;
+}
+.image-list li.active img {
+    opacity: 1;
+    border-color: white; /* Add a border to the active thumbnail */
+    border-radius: 5px;
+}
+
+.project-item {
+    position: relative; /* Needed for absolute positioning of the overlay */
+    overflow: hidden; /* To contain the overlay within the image bounds */
+}
+.project-item img {
+    display: block; /* Prevent extra space below inline images */
+}
+.project-details-container {
+    margin-right: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* Thumb color, Track color */
+    scrollbar-width: thin; /* Adjust width as needed */
+}
+/* For WebKit browsers (Chrome, Safari) */
+.project-details-container::-webkit-scrollbar {
+    width: 8px; /* Adjust width */
+}
+.project-details-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7); /* White, slightly transparent thumb */
+    border-radius: 4px; /* Circular edges */
+}
+.project-details-container::-webkit-scrollbar-track {
+    background-color: transparent; /* Blue, transparent track */
+    border-radius: 4px;
+}
+/* Optional: Hover effect for WebKit thumb */
+.project-details-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+}
+.project-details-container.no-overflow {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.project-details-container.no-overflow::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.project-item {
+    flex-shrink: 0;
+    width: auto; /* Adjust width based on content */
+    margin: 0 10px; /* Spacing between images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8); /* Initially smaller */
+    opacity: 0.6;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.project-item img {
+    max-width: 150px; /* Adjust initial image size */
+    height: auto;
+    object-fit: contain;
+    cursor: pointer; /* Indicate it's interactive */
+    border-radius: 5px;
+
+}
+.project-item.active {
+    transform: scale(1.2); /* Larger active image */
+    opacity: 1;
+    margin: 0 30px; /* More spacing around the active image */
+}
+.project-item.active img {
+    max-width: 300px; /* Adjust active image size */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #72000000 0%, #7200004d 50%, #72000099 80%, #720000 100%); /* White gradient */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Allow clicks to pass through if needed initially */
+}
+
+.image-overlay {
+    opacity: 1; /* Show overlay on active item */
+}
+
+/* Style for the "Read More" link */
+.read-more-link {
+    display: inline-flex;
+    align-items: center;
+    color: white; /* Adjust color */
+    text-decoration: none;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif; /* Adjust font */
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: #ddd; /* Adjust hover color */
+}
+
+/* Style for the arrow icon (same as before) */
+.arrow-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 10px;
+    background-image: url('path/to/your/arrow-icon.svg'); /* Replace with your arrow icon path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    position: relative;
+}
+
+.arrow-icon::before {
+    content: '';
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    width: calc(1em + 0.4em);
+    height: calc(1em + 0.4em);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.read-more-link:hover .arrow-icon::before {
+    border-color: white; /* Circle color on hover */
+    opacity: 1;
+}
+
+/* Style for the active image button */
+.project-item.active .active-image-button {
+    position: absolute;
+    bottom: 10px; /* Adjust distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-item.active .active-image-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.about-wrapper {
+    width: calc(100% - 200px);
+    height: 30%;
+    margin: auto;
+    font-size: medium;
+}
+@media screen and (max-width: 900px) {
+    .about-wrapper { 
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    .radial72 .about-wrapper { 
+        width: 96%;
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+        margin-bottom: 100px;
+    }
+    .project-item img {
+        max-width: 50px; /* Adjust initial image size */
+    }
+    .project-item.active img {
+        max-width: 150px; /* Adjust active image size */
+        margin-top: 50px;
+    }
+    .cust-slider-wrapper {
+        overflow: hidden; /* Hide overflowing side images */
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding:0;
+    }
+}
+

@@ -1,0 +1,263 @@
+/*
+This Is main CSS File
+Containts styles for page sectional content:
+
+This page does not include styles for: 
+
+    See the following files: 
+    orb-css.css
+
+*/
+@font-face {
+    font-family: 'Roboto Thin', Tahoma, Geneva, Verdana, sans-serif;/*Find Kona or whatever*/
+    src: url("https://htdocs/git2025/uploads/fonts/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: 'Krona One';
+    src: url("https://htdocs/git2025/uploads/fonts/Krona_On/KronaOne-Regular.ttf")format('truetype');
+}
+.krona-one-regular {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* Global Colors */
+.blk {
+    background-color: black;
+    box-shadow: inset 0 -4px 4px #ffffff49;
+}
+.wht{background-color: white;}
+.radial72 { z-index: 1;background-image: radial-gradient(at right, #8e0000, #720000, #720000); }
+.radial12 { background-image: radial-gradient(at center, #1e1e1e, #121212, #121212);}
+.btnwhite{background-color: #ffffff;}/* controlls light button */
+.btnblack{background-color: #000000;}/* controlls dark button */
+.btnred {
+    background-color: #fd6262e6;
+    color: white
+}/* controlls acitve button */
+/* End of Global Colors */
+body {
+    font-family: 'Roboto Thin';
+    font-size: .5em;
+    font-weight: 400;
+    color: white;
+    background-color: #121212;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.hp-hero ul li {
+    padding-left: 25px; /* Space for the icon */
+    padding: 20px 0px 0px 0px ;
+    z-index: 1;
+    position: relative;
+    z-index: 1;
+}
+.hp-hero ul.check-list li:hover {
+    transform: scale(1.1); /* Increase size on hover (adjust value as needed) */
+    list-style-image: url('http://localhost/git2025/uploads/images/icon/checkmark.png');
+    color: #720000; /* Change text color on hover (replace with your desired color) */
+}
+.hp-hero ul {
+    position: absolute;
+    float: bottom;
+    width: 18%;
+    list-style-image: url('http://localhost/git2025/uploads/images/icon/checkmark-white.png');
+    font-size: medium;
+    text-align: center;
+    margin-top: 50vh;
+    margin-left: 39%;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#wrapper{
+    margin: 0;
+    font-family: 'Roboto Thin';
+}
+
+section.hp-hero{
+    margin-bottom: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle at 50% 200%,#830000, #830000be, #830000a0, #121212, #121212);
+}
+.hp-hero h1{
+    font-family: "Krona One", sans-serif;
+    width: 100%;
+    position: absolute;
+    margin-top: 10vh;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 4;
+}
+.hp-hero p{
+    position: absolute;
+    margin-top: 20vh;
+    width: 100%;
+    font-size: medium;
+    text-align: center;
+}
+.hp-btn-row {
+    position: absolute;
+    margin-top: 27vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+}
+.hp-hero h2{
+    font-family: "Krona One", sans-serif;
+    width: 100%;
+    position: absolute;
+    margin: 44vh 0px  0px 0px;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 4;
+}
+/* Dividers dark and Light */
+.hero-divider.dvdr_drk{
+    height: 100px;
+    width: 100%;
+    margin-top: -100px;
+}
+.hero-divider.dvdr_drk img{
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    position: relative;
+}
+.hero-divider.btm_dark img{
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0px 4px 4px #ffffff80;
+}
+
+.stripe {
+    width: 100%;
+    height: 100px;
+}
+.stripe h1 {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 2rem;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button{
+    font-family: "Krona One", sans-serif;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+}
+@keyframes trace {
+    0% {
+        top: -7.5px; /* Half of the dot's height */
+        left: 0;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    25% {
+        top: -7.5px; /* Half of the dot's height */
+        left: 100%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    75% {
+        top: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        top: -7.5px; /* Half of the dot's height */
+        left: 0;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+}
+.btn-container {
+    border-radius: 5px;
+    position: relative;
+    padding: 5px;
+    padding-top: 0px;
+    padding-left: 8px;
+    width: 150px; /* Width of the image */
+    height: 50px; /* Height of the image */
+}
+.glow-circle {
+    width: 5px;
+    height: 5px;
+    background-color: #fd6262e6; /* Red glow */
+    border-radius: 50%;
+    position: absolute;
+    animation: trace 4s infinite linear; /* Circular motion around the border */
+}
+
+.about-wrapper {
+    width: calc(100% - 200px);
+    height: 30%;
+    margin: auto;
+    font-size: medium;
+}
+
+.work-wrapper {
+    width: calc(100vw - 200px);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .about-wrapper { 
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    .radial72 .about-wrapper { 
+        width: 96%;
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+    }
+}
+
+
+#footer-wrapper {
+    height: 500px;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10;
+}
+

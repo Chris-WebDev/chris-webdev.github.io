@@ -1,0 +1,1 @@
+Event Management Hub:** Build a centralized website for event organizers to plan, schedule, and coordinate activities. Includes RSVP tracking, reminders, and attendee feedback.

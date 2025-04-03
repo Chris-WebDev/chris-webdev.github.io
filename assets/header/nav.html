@@ -1,0 +1,25 @@
+<nav id="myNav">
+    <img src="uploads/images/icon/main-logo.png" alt="CWT | Developer" id="nav-logo">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    <div class="flex-col">
+        <p>Chris-WebTech Presents | Your 2025 Github</p>
+        <ul class="krona-one-regular">
+            <li><a href="/git2025">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="code.html">Work</a></li>
+            <li><a href="https://christophernmiller.wixsite.com/chris-webtech" target="_blank">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Add responsive tag for small screens
+    function myFunction() {
+        var x = document.getElementById("myNav");
+        if (x.className === "nav") {
+            x.className += " responsive";
+        } else {
+            x.className = "nav";
+        }
+    }
+</script>

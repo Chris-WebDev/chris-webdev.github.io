@@ -1,0 +1,32 @@
+
+  &lt;?php
+  <code class="tan001">session_start</code><code>()</code>;
+
+  <code class="outY01">$membersArray</code> <code class="tan001">=</code> <code class="tan001">array</code><code>(</code>
+    <code class="tan001">array</code><code>(</code>
+      <code class="orng01">'fn'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memfn'</code><code>]</code><code>,</code>
+      <code class="orng01">'ln'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memln'</code><code>]</code><code>,</code>
+      <code class="orng01">'ad'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memaddy'</code><code>]</code><code>,</code>
+      <code class="orng01">'ct'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memcity'</code><code>]</code><code>,</code>
+      <code class="orng01">'st'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memstate'</code><code>]</code><code>,</code>
+      <code class="orng01">'zp'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'memzip'</code><code>]</code><code>,</code>
+      <code class="orng01">'tm'</code> <code class="tan001\">=></code> <code class="outY01">$_POST</code><code>[</code><code class="orng01\">'teamN'</code><code>]</code>
+    <code>)</code>
+  <code>)</code>;  <code class="gren01">/*end of user inputs*/</code>
+
+  <code class="insP01\">for</code> <code>(</code><code class="outY01">$row</code> <code>=</code> <code class="tan001">0</code><code>;</code> <code class="outY01">$row</code> <code class="tan001">&lt;</code> <code class="tan001">1</code><code>;</code> <code class="outY01">$row</code><code>++</code><code>)</code>
+  <code>{</code>  <code class="gren01">// assign 1 rows each row contains 7 users input</code>
+    <code class="tan001\">echo</code> <code>(</code>  <code class="orng01\">"Your First and Last Name:&lt;br>&lt;strong>"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'fn'</code><code>]</code> . <code class="orng01\">"&nbsp;"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'ln'</code><code>]</code> . <code class="orng01\">"&lt;/strong>&lt;br>&lt;br>"</code> .
+      <code class="orng01\">"Your Adress Entered:&lt;br>&lt;strong>"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'ad'</code><code>]</code> . <code class="orng01\">"&amp;nbsp;&amp;nbsp;"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'ct'</code><code>]</code> . <code class="orng01\">"&amp;nbsp;&amp;nbsp;"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'st'</code><code>]</code> . <code class="orng01\">".&amp;nbsp;&amp;nbsp;"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'zp'</code><code>]</code> . <code class="orng01\">"&lt;/strong>&lt;br>&lt;br>"</code> .
+    <code class="orng01\">"Your Team Picked:&lt;br>&lt;strong>"</code> .
+      <code class="outY01">$membersArray</code><code>[</code><code class="outY01">$row</code><code>]</code><code>[</code><code class="orng01\">'tm'</code><code>]</code> . <code class="orng01\">"&lt;/strong>&lt;br>&lt;br>"</code> <code>)</code>;
+  <code>}</code>
+
+  <code class="outY01">$_SESSION</code><code>[</code><code class="orng01\">'player'</code><code>]</code> <code class="tan001\">=</code> <code class="outY01">$membersArray</code><code>;</code>
+  ?>
