@@ -8,14 +8,17 @@
     <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
     <!-- CSS files: -->
     <link rel="stylesheet" href="main.css"><!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/orb-css.css"><!-- Orb CSS -->
-    <link rel="stylesheet" href="assets/css/nav.css"><!-- Navigation CSS -->
-    <link rel="stylesheet" href="assets/css/cust-slider.css"><!--Slider CSS-->
-    <link rel="stylesheet" href="assets/css/color-code.css"><!--Slider CSS-->
+    <!--<link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> Orb CSS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css">
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/cust-slider.css"><!--Slider CSS-->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
     <!-- JavaScript Files: -->
-    <script src="assets/js/script.js"></script> <!-- Main JS -->
-    <script src="assets/js/nav.js"></script><!-- Nav Scripts -->
-    <script src="assets/js/code-controlls.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
+    <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/slider.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/code-controlls.js"></script><!-- Nav Scripts -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +27,7 @@
 <body>
 <div id="nav-holder">
 <!-- 
-    Called w/ main.js
+    Called w/ script.js
     Built: assets/header/nav.html
 -->
 </div>
@@ -66,11 +69,12 @@
         </div>
 
         <div class="hero-divider dvdr_drk">
-            <img src="uploads/images/dividers/hero-div-dark.png" alt="divider">
+            <img src="https://chris-webdev.github.io/uploads/images/dividers/hero-div-dark.png" alt="divider">
         </div>
     </section>
 
     <section class="radial72" style="margin-top: -20px;">
+        
         <div class="about-wrapper">
             <div class="flex-col">
                 <h1 class="krona-one-regular" style="float: left; margin-right: 20px;">About the Work</h1>
@@ -95,22 +99,72 @@
         </div>
     
         <div class="hero-divider btm_dark">
-            <img src="uploads/images/dividers/btm-dark.png" alt="divider">
+            <img src="https://chris-webdev.github.io/uploads/images/dividers/btm-dark.png" alt="divider">
         </div>
     </section>
+
     <section class="code-crsl radial12">
+                <!-- Foreground Content -->
+        <div class="foreground-content">
+
         <div class="stripe blk krona-one-regular">
             <h1>Explore the Work</h1>
         </div>
     
         <div id="code-cntrl">
-            <div id="left-cntrl"></div>
-            <div id="right-cntrl"></div>
+            <div id="left-cntrl" class="dark-cntrl"></div>
+            <div id="right-cntrl" class="dark-cntrl"></div>
         </div>
     
         <div class="code-carousel-wrapper">
             <div class="code-carousel">
                 </div>
+        </div>
+    </div>
+        <!-- Three.js Background ROBOT-->
+        <div id="threejs-container">
+            <style>
+                body, html {
+                    width: 100%;
+                    height: 100%;
+                }
+                #threeCanvas {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1; /* Place the canvas in the background */
+                }
+                .foreground-content {
+                    position: relative;
+                    z-index: 2; /* Keep this content on top of the Three.js canvas */
+                    padding: 20px;
+                    color: white;
+                    font-family: Arial, sans-serif;
+                }
+                #threejs-container {
+                    position: absolute;
+                    top: 140px;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1; /* Ensures the Three.js canvas is behind other elements */
+                }
+
+                #threeCanvas {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                
+            </style>
+          <script type="module" crossorigin src="https://chris-webdev.github.io/assets/3d-render/dist/assets/index-BHY4KheZ.js"></script>
+            <canvas id="threeCanvas"></canvas>
         </div>
     </section>
 

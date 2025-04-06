@@ -1,5 +1,4 @@
 .code-crsl {
-  margin-bottom: 50px;
   height: 100%
 }
 
@@ -88,7 +87,6 @@ code.tan001 {
 }
 
 .code-card::before {
-  background-image: url('https://chris-webdev.github.io/uploads/images/icon/small-logo.png'); /* Replace with your image path */
   background-size: 200px; /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
@@ -141,13 +139,21 @@ code.tan001 {
   background-color: #720000; /* Darker red on hover (optional) */
 }
 
+#left-cntrl.dark-cntrl {
+  background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
+  background-size: contain;
+  rotate: 180deg;
+}
+#right-cntrl.dark-cntrl {
+  background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
+  background-size: contain;
+}
 #left-cntrl,
 #right-cntrl {
   cursor: pointer;
   font-size: 24px;
   color: #333;
-  background-color: #eee;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   display: flex;

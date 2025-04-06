@@ -1,0 +1,18 @@
+{
+    "projects": [
+      {
+        "id": "project1",
+        "title": "Project 1 Title",
+        "description": "Project 1 description...",
+        "content": "<p>Project 1 content...</p>",
+        "imageUrl": "assets/images/project1.jpg"
+      },
+      {
+        "id": "project2",
+        "title": "Project 2 Title",
+        "description": "Project 2 description...",
+        "content": "<p>Project 2 content...</p>",
+        "imageUrl": "assets/images/project2.jpg"
+      }
+    ]
+  }

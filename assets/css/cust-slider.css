@@ -171,7 +171,7 @@
     width: 1em;
     height: 1em;
     margin-left: 10px;
-    background-image: url('path/to/your/arrow-icon.svg'); /* Replace with your arrow icon path */
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png'); /* Replace with your arrow icon path */
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
@@ -189,6 +189,11 @@
     border-radius: 50%;
     opacity: 0;
     transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+.read-more-link:hover .arrow-icon {
+    font-size: 1.3em;
+    width: 1.3em;
+    height: 1.3em;
 }
 
 .read-more-link:hover .arrow-icon::before {

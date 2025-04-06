@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Project A",
+      "description": "Description of Project A.",
+      "technologies": ["PHP"],
+      "explore_url": "project-a",
+      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-a.php.txt",
+      "template": "project-a-temp"
+    },
+    {
+      "id": "project2",
+      "title": "Project B",
+      "description": "Description of Project B.",
+      "technologies": ["JavaScript"],
+      "explore_url": "project-b", 
+      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-b.php.txt",
+      "template": "project-b-temp"
+    },
+    {
+      "id": "project3",
+      "title": "Project C",
+      "description": "Description of Project C.",
+      "technologies": ["PHP"],
+      "explore_url": "project-c", 
+      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-c.php.txt",
+      "template": "project-c-temp"
+    },
+    {
+      "id": "project4",
+      "title": "Project D",
+      "description": "Description of Project D.",
+      "technologies": ["PHP"],
+      "explore_url": "project-d", 
+      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-d.php.txt",
+      "template": "project-d-temp"
+    },
+    {
+      "id": "project5",
+      "title": "Project E",
+      "description": "Description of Project E.",
+      "technologies": ["PHP"],
+      "explore_url": "project-e", 
+      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-e.php.txt",
+      "template": "project-e-temp"
+    }
+  ]
+}

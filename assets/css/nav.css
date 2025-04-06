@@ -1,9 +1,82 @@
 /* Navigation Styles */
+/* Basic styling for the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50; /* You might want to remove or adjust this as it might not fit your design */
+    color: white; /* Same here */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: calc(98.2% + 9px); /* Adjust if needed */
+}
+
+.dropdown-content {
+    display: none;
+    text-align: left;
+    border: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    background-color: #121212be;
+    min-width: calc(100% * 11.37);
+    transform: translateX(-79.3%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 5px;
+}
+
+.dropdown-content a {
+    transform: translateX(83%);
+    text-align: right;
+    padding: 12px 16px; /* Ensure some padding */
+    display: block; /* Make each link a block */
+    max-width: 50%;
+}
+.dropdown-content a::before,
+.dropdown-content a::after {
+    background-color: transparent; /* Remove potential background */
+    text-align: left; /* Keep alignment */
+    color: #720000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Image Container */
+.dropdown .image-container {
+    position: absolute;
+    top: 150px;
+    left: -860%;
+    width: 350px;
+    height: auto; /* Adjust as needed */
+    border: 1px solid #333; /* Optional border */
+    background-color: #222; /* Optional background */
+    display: none; /* Hidden by default */
+    z-index: 2; /* Ensure it's above the dropdown */
+}
+
+.dropdown:hover .image-container {
+    display: block;
+}
+
+.dropdown .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Or cover, etc. */
+}
+
+/* Your existing nav styles remain the same */
 nav {
+    width: 90%;
     position: relative;
     background-color: #121212;
     height: 150px;
-    padding: 0px 100px;
+    padding: 0px 100px 0px 100px;
     display: flex;
     justify-content: space-between;
     align-self: center;
@@ -12,7 +85,7 @@ nav {
     z-index: 10;
     transition: background-color 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, height 0.3s ease-in, margin-left 0.3s ease-in, width 0.3s ease-in, border 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, transform 0.3s ease-in-out; /* Added transform transition */
 }
-nav ul{
+nav ul {
     list-style: none;
     font-size: 14px;
     font-family: 'Krona One';
@@ -21,7 +94,7 @@ nav ul{
     height: 100%;
     align-items: end;
 }
-nav li{
+nav li {
     width: 25%;
     height: 100%;
     display: flex;
@@ -36,7 +109,7 @@ nav a {
     align-content: end;
 }
 
-nav .flex-col{
+nav .flex-col {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -64,7 +137,7 @@ nav ul a::before {
     left: -100%; /* Initially hidden to the left */
     width: 100%;
     height: 100%;
-    background:#fd6262e6;
+    background: #fd6262e6;
     /* The hover background color */
     z-index: -1; /* Places it behind the text */
     transition: left 0.3s; /* Smooth sweeping animation */
@@ -93,11 +166,12 @@ nav ul a:hover::after {
     width: 100%; /* Makes the underline slide in from the left */
 }
 
-#nav-logo{
+#nav-logo {
     display: flex;
     align-self: center;
     height: 80%;
 }
+
 /* End Nav Styles */
 
 /* Navigation Styles After Scrolling */
@@ -118,82 +192,21 @@ nav.scrolled {
     opacity: 1;
     transition: height 0.3s ease-in, width 0.3s ease-in, background-color 0.3s ease-in, border 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, top 0.3s ease-in;
 }
+
 nav.scrolled.shrinking {
     opacity: 0; /* Fade out as it shrinks */
 }
-nav.scrolled .flex-col p {display: none;}
 
-nav .icon {display: none;}
-@media screen and (max-width: 900px) {
-    #myNav { 
-        width: 96%;
+nav.scrolled .flex-col p {
+    display: none;
+}
 
-    }
+/* You might want to adjust for smaller screens */
+@media (max-width: 900px) {
     nav {
-        display: flex; /* Change to block to allow full width */
-        justify-content: space-between;
-        position: relative; /* Needed for absolute positioning of icon */
-        padding-left: 10px;
-        padding-right: 15px;
-        height: 50px;
-        width: 100%
+        height: 100px;
     }
-
-    nav .flex-col {
-        display: none; /* Hide the text links and paragraph by default */
-        width: 100%; /* Make it full width when expanded */
-        position: fixed; /* Fixed position to cover the screen */
-        top: 0;
-        left: 0;
-        height: 100vh; /* Cover the entire viewport height */
-        background-color: #121212; /* Match your nav background */
-        flex-direction: column;
-        justify-content: center; /* Center content vertically */
-        align-items: center; /* Center content horizontally */
-        z-index: 1001; /* Ensure it's above other content */
-    }
-
-    nav .flex-col p {
-        text-align: center; /* Center the paragraph text */
-        margin-bottom: 20px; /* Add space between paragraph and links */
-    }
-
-    nav .flex-col ul {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center links horizontally */
-        padding: 0; /* Remove default padding */
-    }
-
-    nav .flex-col li {
-        width: auto; /* Allow links to take their natural width */
-        margin: 10px 0; /* Add vertical spacing between links */
-    }
-
-    nav a.icon {
-        display: flex block; /* Show the hamburger icon */
-        flex-wrap: wrap;
-        align-content: center;
-        font-size: 2.5rem; /* Make the icon larger */
-        color: white; /* Match your text color */
-        z-index: 1002; /* Ensure it's above the expanded menu */
-        text-decoration: none;
-        width: 2.5rem;
-    }
-
-    nav.responsive .flex-col {
-        display: flex; /* Show the text links when the 'responsive' class is added */
-    }
-    nav.responsive {
-      position: relative;
-    }
-
-    nav.scrolled {
-        position: fixed;
-        height: 50px;
-        width: 100%;
-        left: 0%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust for the element's width */
-        margin-top: 0px;
-        top: 0px;
+    #nav-logo {
+        display: none;
     }
 }

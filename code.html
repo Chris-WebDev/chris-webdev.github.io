@@ -8,16 +8,17 @@
     <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
     <!-- CSS files: -->
     <link rel="stylesheet" href="main.css"><!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/orb-css.css"><!-- Orb CSS -->
-    <link rel="stylesheet" href="assets/css/nav.css"><!-- Navigation CSS -->
-    <link rel="stylesheet" href="assets/css/cust-slider.css"><!--Slider CSS-->
-    <link rel="stylesheet" href="assets/css/color-code.css"><!--Slider CSS-->
-    <link rel="stylesheet" href="assets/css/blog.css"><!--Slider CSS-->
-
+    <!--<link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> Orb CSS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css">
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/hero-slider.css"><!--Wix Blog Post CSS-->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
     <!-- JavaScript Files: -->
-    <script src="assets/js/script.js"></script> <!-- Main JS -->
-    <script src="assets/js/nav.js"></script><!-- Nav Scripts -->
-    <script src="assets/js/code-controlls.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
+    <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/hero-slider.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/code-controlls.js"></script><!-- Nav Scripts -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,31 +32,30 @@
         -->
     </div>
 <div id="wrapper">
-<!-- Home Page - Hero Section (hp-hero)-->
-    <section class="hp-hero">
-        <h1 class="krona-one-regular">Visually Aesthetic</h1>
-        <p>Choose your bewtween light or dark preview</p>
-        <div class="hp-btn-row">
-            <div class="btn-container">
-                <button class="btnred">DARK MODE</button>
-                <div class="glow-circle"></div>
-            </div>
-            
-            <div id="space01" style="width: 20px;"></div>
-
-            <div class="btn-container">
-                <button class="btnwhite">LIGHT MODE</button>
-                <div class="glow-circle2"></div>
-            </div>
+<!-- Work Page - Hero Section (wp-hero)-->
+    <section class="wp-hero">
+        <div class="hero-heading-container">
+            <h2 class="hero-heading krona-one-regular">Custome Work Slider</h2>
+            <p>Easy to track and update</p>
+            <p>new or existing projects</p>
         </div>
-        <div class="hero-list">
-        <h2 class="krona-one-regular">Chris-WebTech | Presents</h2>
-        <ul class="check-list">
-            <li>Modern Design</li>
-            <li>Flex Box Responsive</li>
-            <li>Organized Code</li>
-            <li>Light/Dark Mode</li>
-        </ul>
+        <div class="hero-slider">
+            <div class="slider-image-container">
+                <div class="slider-image active" data-index="0" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-1-full.PNG');"></div>
+                <div class="slider-image" data-index="1" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-2-full.PNG');"></div>
+                <div class="slider-image" data-index="2" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-3-full.PNG');"></div>
+                <div class="slider-image" data-index="3" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-4-full.PNG');"></div>
+                <div class="slider-image" data-index="4" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-5-full.PNG');"></div>
+                <div class="slider-image" data-index="5" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/hero-slider/poj-6-full.PNG');"></div>
+            </div>
+            <div class="slider-controls">
+                <div class="hp-poj active-control" data-index="0" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-1.PNG');"></div>
+                <div class="hp-poj" data-index="1" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-2.PNG');"></div>
+                <div class="hp-poj" data-index="2" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-3.PNG');"></div>
+                <div class="hp-poj" data-index="3" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-4.PNG');"></div>
+                <div class="hp-poj" data-index="4" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-5.PNG');"></div>
+                <div class="hp-poj" data-index="5" style="background-image: url('https://chris-webdev.github.io/uploads/images/default/iso/poj-6.PNG');"></div>
+            </div>
         </div>
         <!-- 
         Floating Orbs assets/orbs-css.css
@@ -67,19 +67,19 @@
             <div class="orb" id="down"></div>
         </div>
 
-        <div class="hero-divider dvdr_drk">
-            <img src="uploads/images/dividers/btm-dark.png" alt="divider">
-        </div>
-    </section>
 
+    </section>
+    <div class="hero-divider dvdr_drk" style="margin-top: -55px;">
+        <img src="https://chris-webdev.github.io/uploads/images/dividers/btm-dark.png" alt="divider">
+    </div>
     <section class="code-crsl radial12">
         <div class="stripe blk krona-one-regular">
             <h1>Explore the Work</h1>
         </div>
     
         <div id="code-cntrl">
-            <div id="left-cntrl"></div>
-            <div id="right-cntrl"></div>
+            <div id="left-cntrl" class="dark-cntrl"></div>
+            <div id="right-cntrl" class="dark-cntrl"></div>
         </div>
     
         <div class="code-carousel-wrapper">
