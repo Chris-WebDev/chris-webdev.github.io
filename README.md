@@ -1,9 +1,9 @@
 # chris-webdev.github.io
-#Welcome to the CWT 2025 GitHub
+# Welcome to the CWT 2025 GitHub
 
-###Showcasing a modern flexbox design with a complex intercut framework controlling the UI and UX.
+### Showcasing a modern flexbox design with a complex intercut framework controlling the UI and UX.
 
-####The following application is design as such:
+#### The following application is designed as such:
 
 index.html
 about.html
@@ -11,7 +11,7 @@ code.html
 main.css
 projects.json
 
-####With the following directories:
+#### With the following directories:
 ```markdown
 chris-webdev.github.io/assets/ -
     chris-webdev.github.io/assets/js/ -                   [Contains the page functions files]
@@ -33,10 +33,10 @@ chris-webdev.github.io/assets/ -
 
 chris-webdev.github.io/uploads/ -
     chris-webdev.github.io/uploads/text/ -                [Controls post text]
-        - text/ProjectFour.txt                            [The following txt files are used]
-        - text/ProjectOne.txt                             [To create the meta tag description]
-        - text/ProjectThree.txt                           [For the image slider section]
-        - text/ProjectTwo.txt                             [(web-projects)]
+        - text/ProjectFour.txt                            [The following text files are used]
+        - text/ProjectOne.txt                             [to create the meta tag description]
+        - text/ProjectThree.txt                           [for the image slider section]
+        - text/ProjectTwo.txt                             [(web-projects).]
         - text/ProjectFive.txt
         - text/code/                                      [Controls 3D Card Content]
             - code/project-d.php.txt
