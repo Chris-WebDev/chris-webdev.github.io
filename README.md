@@ -12,7 +12,7 @@ main.css
 projects.json
 
 ####With the following directories:
-
+------------------------------------------------			-------------------------------------
 chris-webdev.github.io/assets/ - 
 	chris-webdev.github.io/assets/js/- 			[contains the page functions files]
 		- js/script.js						[Controls main site functions]
