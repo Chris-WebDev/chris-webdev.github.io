@@ -13,7 +13,6 @@ projects.json
 
 ####With the following directories:
 '''
---------------------------------------------                   ---------------------------  
 chris-webdev.github.io/assets/ -  
     chris-webdev.github.io/assets/js/-           		[contains the page functions files]  
         - js/script.js                       			[Controls main site functions]  
@@ -21,17 +20,17 @@ chris-webdev.github.io/assets/ -
         - js/carousel-data.json                  		[Controls 3D Card Carousel paths]  
         - js/code-controls.js                   		[Controls 3D Card Build]  
         - js/nav.js                         			[Controls navigation bar functions]  
-    ----------------------------------------                    -----------------------------   
+
     chris-webdev.github.io/assets/css -                		[Contains page styles]  
         - css/cust-slider.css                  			[Styles other web work]  
         - css/nav.css                          			[Styles the navigation bar]  
         - css/orb-css.css                      			[Animates Hero orbs]  
         - css/blog.css                         			[Styles blog reference post]  
         - css/color-code.css                   			[Styles 3D Card section]  
-    ----------------------------------------                    -----------------------------   
+
     chris-webdev.github.io/assets/header-              		[Contains webpage navigation]  
         - header/nav.html                  			[Builds nav w/ dropdown]  
-    ----------------------------------------                    -----------------------------   
+
 chris-webdev.github.io/uploads -  
     chris-webdev.github.io/uploads/text/ -            		[Controls post text]  
         - text/ProjectFour.txt                 			[The following txt files are used]  
@@ -46,15 +45,13 @@ chris-webdev.github.io/uploads -
             - code/project-b.php.txt  
             - code/project-c.php.txt  
 
-    ----------------------------------------                    -----------------------------   
     chris-webdev.github.io/uploads/videos/ -       		[*Optional video reference*]  
         -  
-    ----------------------------------------                    -----------------------------   
     chris-webdev.github.io/uploads/fonts/ -        		[Ready-to-use branding fonts]  
         - fonts/Roboto-Italic-VariableFont_wdth,wght.ttf	[Optional Styling in Italic]  
         - fonts/Roboto-VariableFont_wdth,wght.ttf       	[Main Body Font]  
         - fonts/Krona_One                      			[Optional Branding font upload]  
-    ----------------------------------------                    -----------------------------   
+
     chris-webdev.github.io/uploads/images/ -       		[Contains all images for site]  
         - images/hero  
         - images/icon  
