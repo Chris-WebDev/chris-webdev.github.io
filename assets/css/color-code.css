@@ -41,6 +41,12 @@ code.tan001 {
   position: absolute;
   right: 0;
   top: 0;
+  width: 100px;
+  height: 30px;
+  background: #000000;
+  border: 0;
+  border-radius: 0px 5px 0px 5px;
+  color: white;
 }
 
 .code-carousel-wrapper {
@@ -108,7 +114,7 @@ code.tan001 {
 }
 
 .code-card.active-expanded {
-  background-color: #720000 !important; /* Red background for the active card */
+  background-color: #121212 !important; /* Red background for the active card */
 }
 
 .code-card.active-expanded::before {
@@ -181,6 +187,15 @@ code.tan001 {
   width: 300px; /* Controls the width of the cards */
   height: 200px; /* Controls the height of the cards */
   /* ... other styles ... */
+}
+
+button.explore-button {
+  height: 30px;
+  width: 75%;
+  background-color: #720000;
+  border: none;
+  box-shadow: white 0px 5px 5px 0px;
+  color: white;
 }
 
 @media (max-width: 1347px) {

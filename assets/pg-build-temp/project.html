@@ -4,56 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CWT Presents | Eay to Use Page-Builder</title>
-    <!-- Site: Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
-    <!-- CSS files: -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"><!-- Orb CSS -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
-    <!-- JavaScript Files: -->
-    <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
-    <script src="https://chris-webdev.github.io/assets/pg-build-temp/assets/js/main.js"></script>
-    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"><link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><script src="https://chris-webdev.github.io/assets/js/nav.js"></script><script src="https://chris-webdev.github.io/assets/js/script.js"></script> <script src="https://chris-webdev.github.io/assets/pg-build-temp/assets/js/project.js"></script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .image-grid-lightbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid-lightbox img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        /* Basic lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Show the entire image within the bounds */
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
 <div id="nav-holder">
-<!-- 
-    Called w/ main.js
-    Built: assets/header/nav.html
--->
 </div>
 <div id="wrapper">
-<!-- Home Page - Hero Section (hp-hero)-->
     <section class="hp-hero">
-    <div class="hero-content-holder">
-        <div id="project-details">
+        <div class="hero-content-holder">
+            <div id="project-details">
+            </div>
         </div>
-        <a href="../">Back to Projects</a>
-        <script src="https://chris-webdev.github.io/assets/pg-build-temp/assets/js/project.js"></script>
-    </div>
         <div class="container">
             <div class="orb" id="left"></div>
             <div class="orb" id="right"></div>
             <div class="orb" id="up"></div>
             <div class="orb" id="down"></div>
         </div>
-
-        <div class="hero-divider dvdr_drk">
-            <img src="https://chris-webdev.github.io/uploads/images/dividers/hero-div-dark.png" alt="divider">
-        </div>
     </section>
-
-    <section class="radial72" style="margin-top: -20px;">
-        
+    <div class="hero-divider dvdr_drk">
+        <img src="https://chris-webdev.github.io/uploads/images/dividers/hero-div-dark.png" alt="divider">
+    </div>
+    <section class="radial72" style="height: auto; margin-top: -20px;">
         <div class="about-wrapper">
+            <div id="about-image-container">
+            </div>
+            <div id="about-text-container">
+            </div>
+            <div class="image-grid-lightbox" id="image-grid-container">
+            </div>
+            <div class="lightbox" id="lightbox">
+                <img src="" alt="Lightbox Image">
+            </div>
         </div>
     </section>
-
+    <script>
+        // Basic lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const imageGridContainer = document.getElementById('image-grid-container');
+    
+        if (imageGridContainer) {
+            imageGridContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    lightboxImg.src = e.target.src;
+                    lightbox.classList.add('active');
+                }
+            });
+        }
+    
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
 </div>
 </body>
 <footer>

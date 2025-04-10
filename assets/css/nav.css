@@ -47,11 +47,12 @@
 }
 
 /* Image Container */
+
 .dropdown .image-container {
     position: absolute;
     top: 150px;
     left: -860%;
-    width: 350px;
+    width: 150px;
     height: auto; /* Adjust as needed */
     border: 1px solid #333; /* Optional border */
     background-color: #222; /* Optional background */
@@ -117,7 +118,8 @@ nav .flex-col {
 }
 nav .flex-col p {
     font-size: small;
-    text-align: right;
+    width: 108%;
+    text-align: center;
 }
 
 nav ul a {

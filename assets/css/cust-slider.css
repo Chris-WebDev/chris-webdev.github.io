@@ -14,7 +14,7 @@
 
 .radial72 .about-wrapper p {
     float: left;
-    max-width: 300px;
+    width: 700px;
 }
 
 .cust-slider-wrapper {
@@ -77,10 +77,7 @@
 }
 .project-details-container {
     margin-right: 10px;
-    height: 200px;
-    overflow-y: scroll;
-    scrollbar-color: rgba(255, 255, 255, 0.7) transparent; /* Thumb color, Track color */
-    scrollbar-width: thin; /* Adjust width as needed */
+    height: auto;
 }
 /* For WebKit browsers (Chrome, Safari) */
 .project-details-container::-webkit-scrollbar {
@@ -150,20 +147,27 @@
     opacity: 1; /* Show overlay on active item */
 }
 
-/* Style for the "Read More" link */
+/* Add these styles to your existing CSS */
 .read-more-link {
-    display: inline-flex;
-    align-items: center;
-    color: white; /* Adjust color */
-    text-decoration: none;
-    margin-top: 10px;
-    font-family: 'Quicksand', sans-serif; /* Adjust font */
-    transition: color 0.3s ease;
-}
-
-.read-more-link:hover {
-    color: #ddd; /* Adjust hover color */
-}
+    display: inline-flex; /* To align text and image nicely */
+    align-items: center; /* Vertically align text and image */
+    gap: 5px; /* Add some space between text and image */
+    text-decoration: none; /* Remove default link underline if you want */
+    /* Add other link styles as needed */
+  }
+  
+  .read-more-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it a circle */
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transitions */
+  }
+  
+  .read-more-icon:hover {
+    transform: scale(1.2) rotate(360deg); /* Increase size and rotate on hover */
+    width: 25px; /* Adjust hover size */
+    height: 25px; /* Adjust hover size */
+  }
 
 /* Style for the arrow icon (same as before) */
 .arrow-icon {

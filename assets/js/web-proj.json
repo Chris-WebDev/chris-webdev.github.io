@@ -1,33 +1,100 @@
-[
-  {
-    "imageSrc": "https://chris-webdev.github.io/uploads/images/icon/img1.png",
-    "title": "Project One Title",
-    "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectOne.txt",
-    "link": "project-one.html"
-  },
-  {
-    "imageSrc": "https://chris-webdev.github.io/uploads/images/icon/img2.png",
-    "title": "Project Two Title",
-    "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectTwo.txt",
-    "link": "project-one.html"
-  },
-  {
-    "imageSrc": "https://chris-webdev.github.io/uploads/images/icon/img1.png",
-    "title": "Project Three Title",
-    "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectThree.txt",
-    "link": "project-one.html"
-  },
-  {
-    "imageSrc": "https://chris-webdev.github.io/uploads/images/icon/img2.png",
-    "title": "Project Four Title",
-    "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFour.txt",
-    "link": "project-one.html"
-  },
-  {
-    "imageSrc": "https://chris-webdev.github.io/uploads/images/icon/img1.png",
-    "title": "Project Five Title",
-    "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFive.txt",
-    "link": "project-one.html"
-  }
-  
-]
+{
+  "projects": [
+    {
+      "id": "project1",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img1.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-br.png",
+      "title": "Baumans Roofing LLC",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectOne.txt",
+      "explore_url": "project-one.html",
+      "technologies": [],
+      "template": "project-one-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/br/br-hr.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/br/br-2.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/br/br-3.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/br/br-4.png"
+      ]
+    },
+    {
+      "id": "project2",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img2.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-scf.png",
+      "title": "Swallow Crest Farm",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectTwo.txt",
+      "explore_url": "project-two.html",
+      "technologies": [],
+      "template": "project-two-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/scf/slide_one.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/scf/slide_four.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/scf/slide_five.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/scf/slide_six.png"
+      ]
+    },
+    {
+      "id": "project3",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img5.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-rc.png",
+      "title": "React JS",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectThree.txt",
+      "explore_url": "project-three.html",
+      "technologies": [],
+      "template": "project-three-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/rc/rc-1.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/rc/rc-2.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/rc/rc-3.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/rc/rc-4.png"
+      ]
+    },
+    {
+      "id": "project4",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img3.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-ff.png",
+      "title": "Forever Friends",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFour.txt",
+      "explore_url": "project-four.html",
+      "technologies": [],
+      "template": "project-four-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/ff/one.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/ff/two.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/ff/one.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/ff/one.png"
+      ]
+    },
+    {
+      "id": "project5",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img4.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-wp.png",
+      "title": "WordPress Expirence",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFive.txt",
+      "explore_url": "project-five.html",
+      "technologies": [],
+      "template": "project-five-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/wp/wp-1.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/wp/wp3.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/wp/wp2.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/wp/wp-1.png"
+      ]
+    },
+    {
+      "id": "project6",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img6.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-gv1.png",
+      "title": "Github V1",
+      "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFive.txt",
+      "explore_url": "project-five.html",
+      "technologies": [],
+      "template": "project-five-temp",
+      "horizontalImages": [
+        "https://chris-webdev.github.io/uploads/images/default/light-box/gv1/git-1.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/gv1/git-2.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/gv1/git-3.png",
+        "https://chris-webdev.github.io/uploads/images/default/light-box/gv1/git-4.png"
+      ]
+    }
+  ]
+}

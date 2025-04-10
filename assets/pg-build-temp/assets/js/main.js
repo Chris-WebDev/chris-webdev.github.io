@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadProjects() {
-    fetch('http://localhost/chris-webdev.github.io/assets/js/carousel-data.json')
+    fetch('https://chris-webdev.github.io/assets/js/code-crsl-data.json')
         .then(response => response.json())
         .then(data => {
             const projects = data.projects;
@@ -11,4 +11,3 @@ function loadProjects() {
         })
         .catch(error => console.error('Error loading project data:', error));
 }
-

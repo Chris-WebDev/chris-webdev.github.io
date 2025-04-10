@@ -4,33 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CWT Presents | Jonior Developer</title>
-    <!-- Site: Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
-    <!-- CSS files: -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
-    <!--<link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> Orb CSS -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css">
     <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css">
-    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
-    <!-- JavaScript Files: -->
-    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
-    <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css">
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css">
+    <script src="https://chris-webdev.github.io/assets/js/script.js"></script>
+    <script src="https://chris-webdev.github.io/assets/js/nav.js"></script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .image-grid-lightbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid-lightbox img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        /* Basic lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Show the entire image within the bounds */
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     <div id="nav-holder">
-        <!-- 
-            Called w/ main.js
-            Built: assets/header/nav.html
-        -->
-    </div>
+        </div>
     <div id="wrapper">
-    <!-- Home Page - Hero Section (hp-hero)-->
-        <section class="ap-hero" style="background-image: url('https://chris-webdev.github.io/uploads/images/hero/ap-hero.png');">
+    <section class="ap-hero" style="background-image: url('https://chris-webdev.github.io/uploads/images/hero/ap-hero.png');">
         <div class="hp-hero hero-content-holder">
             <h1 class="krona-one-regular">Visually Aesthetic</h1>
                 <p>Choose your bewtween light or dark preview</p>
@@ -39,7 +68,7 @@
                 <button class="btnred">DARK MODE</button>
                 <div class="glow-circle"></div>
             </div>
-            
+
             <div id="space01" style="width: 20px;"></div>
 
             <div class="btn-container">
@@ -48,50 +77,105 @@
             </div>
         </div>
         </div>
-            <!-- 
-            Floating Orbs assets/orbs-css.css
-            -->
             <div class="container">
                 <div class="orb" id="left"></div>
                 <div class="orb" id="right"></div>
                 <div class="orb" id="up"></div>
                 <div class="orb" id="down"></div>
             </div>
-    
+
             <div class="hero-divider dvdr_drk">
                 <img src="https://chris-webdev.github.io/uploads/images/dividers/hero-div-dark.png" alt="divider">
             </div>
         </section>
-    
-        <section class="radial72" style="margin-top: -20px;">
+
+        <section class="radial72" style=" height: auto; margin-top: -20px;">
             <div class="about-wrapper">
                 <div class="flex-col">
                     <h1 class="krona-one-regular" style="float: left; margin-right: 20px;">About the Work</h1>
-                    <p style="max-width: 300px; float: left;">
-                        View exceptional Pieces...
+                    <p style="max-width: 700px; float: left;">
+                        chris-webdev Git 2025 offers custom-slider integration, lightbox images, and a organsized backend.
+                        GitHub Pages allows for 1 GB of data and this framework with basic content is at 35mb meaning fast,
+                        reliable, and tuns of room to expand. View the Work and examine the backend.
                     </p>
                 </div>
-                <div style="clear: both;"></div>
-        
-                <div class="project-details-container flex-col">
-                    <h3 id="project-title" class="krona-one-regular"></h3>
-                    <p id="project-description"></p>
-                    <a id="read-more-link" href="#" class="read-more-link">
-                        Read More <span class="arrow-icon"></span>
-                    </a>
-                </div>
             </div>
-        
-            <div class="cust-slider-wrapper">
-                <div class="cust-slider">
-                    </div>
+            <style>
+        .image-grid-lightbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid-lightbox img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+
+        /* Basic lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Show the entire image within the bounds */
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+            </style>
+            <div class="image-grid-lightbox" id="image-grid-container">
+                <img src="https://chris-webdev.github.io/uploads/images/default/aboutGit/git-1.png" alt="Git Image 1">
+                <img src="https://chris-webdev.github.io/uploads/images/default/aboutGit/git-2.png" alt="Git Image 2">
+                <img src="https://chris-webdev.github.io/uploads/images/default/aboutGit/git-3.png" alt="Git Image 3">
+                <img src="https://chris-webdev.github.io/uploads/images/default/aboutGit/git-4.png" alt="Git Image 4">
             </div>
-        </section>    
+            <div class="lightbox" id="lightbox">
+                <img src="" alt="Lightbox Image">
+            </div>
+        </section>
+        <script>
+            // Basic lightbox functionality
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const imageGridContainer = document.getElementById('image-grid-container');
+
+            if (imageGridContainer) {
+                imageGridContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'IMG') {
+                        lightboxImg.src = e.target.src;
+                        lightbox.classList.add('active');
+                    }
+                });
+            }
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        </script>
     </div>
     </body>
     <footer>
     <div id="footer-wrapper">
-    
+
     </div>
     </footer>
 </html>

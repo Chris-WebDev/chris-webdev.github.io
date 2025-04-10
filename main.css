@@ -247,9 +247,9 @@ button{
 }
 
 .about-wrapper {
-    width: calc(100% - 200px);
+    width: calc(100% - 215px);
     height: 30%;
-    margin: auto;
+    margin: 100px 100px 0px 100px;
     font-size: medium;
 }
 
@@ -261,6 +261,50 @@ button{
     align-content: center;
     flex-wrap: wrap;
     margin: auto;
+}
+
+/* Single Page Builder */
+#about-image-container {
+    width: 400px;
+}
+#about-image-container img{ max-width: 100%; }
+
+.image-grid-lightbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-grid-lightbox img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Basic lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Show the entire image within the bounds */
+}
+
+.lightbox.active {
+    display: flex;
 }
 
 @media screen and (max-width: 900px) {
