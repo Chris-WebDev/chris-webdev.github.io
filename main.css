@@ -54,11 +54,11 @@ a{text-decoration: none; color: #fd6262e6;}
 }
 @font-face {
     font-family: 'Krona One';
-    src: url("http://localhost/chris-webdev.github.io-lh/uploads/fonts/Krona_One/KronaOne-Regular.ttf") format('truetype');
+    src: url("https://chris-webdev.github.io/uploads/fonts/Krona_One/KronaOne-Regular.ttf") format('truetype');
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('http://localhost/chris-webdev.github.io-lh/uploads/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('https://chris-webdev.github.io/uploads/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
     font-weight: 1 1000; /* Supports a range of weights */
     font-style: normal; 
 }
@@ -114,7 +114,7 @@ div.hero-list > ul {
     padding-bottom: 50px;
 }
 .check-list li {
-    background: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/checkmark-white.png') no-repeat left center; /* Adds your custom image */
+    background: url('https://chris-webdev.github.io/uploads/images/icon/checkmark-white.png') no-repeat left center; /* Adds your custom image */
     margin-top: 20px;
 }
 
@@ -237,7 +237,7 @@ button {
 .gradient-over {
     font-size: 3em;
     height: fit-content;
-    background-image: radial-gradient(at 48% 55%, transparent -54%, #121212 58%), url('http://localhost/chris-webdev.github.io-lh/uploads/images/default/aboutGit/teck-stack.png');
+    background-image: radial-gradient(at 48% 55%, transparent -54%, #121212 58%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/teck-stack.png');
     background-size: 68%;
     background-repeat: no-repeat;
     background-position-y: 56%;
@@ -286,7 +286,7 @@ button {
 }
 /* Style for each <p> using nth-child */
 .tech-stack p:nth-child(1) {
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/css.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/css.svg');
     background-repeat: no-repeat;
     margin-left: 100px;
     margin-top: -150px;
@@ -296,14 +296,14 @@ button {
 
 /* Style for each <p> using nth-child */
 .tech-stack p:nth-child(2) {
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/css.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/css.svg');
     background-repeat: no-repeat;
     background-size: 10%;
     background-position: 7%;
 }
 
 .tech-stack p:nth-child(3) {
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/node-js.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/node-js.svg');
     background-size: 10%;
     margin-left: 100px;
     background-position: 7%;
@@ -311,13 +311,13 @@ button {
 }
 
 .tech-stack p:nth-child(4) {
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/js.png');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/js.png');
     background-size: 10%;
     background-position: 6%;
     background-repeat: no-repeat;
 }
 .tech-stack p:nth-child(5) {
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/json.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/json.svg');
     background-size: 15%;
     background-position: 4%;
     background-repeat: no-repeat;
@@ -330,14 +330,14 @@ style {display: none;}
 /* Work Page */
 .git-icon {
     width: 40px;
-    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/git.png');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/git.png');
     background-size: 100%;
     background-position: 4%;
     background-repeat: no-repeat;
 }
 
 .wp-hero-background {
-    background-image: radial-gradient(114% 94%, transparent -16%, #121212 39%), url('http://localhost/chris-webdev.github.io-lh/uploads/images/default/aboutGit/about-pae.png');
+    background-image: radial-gradient(114% 94%, transparent -16%, #121212 39%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/about-pae.png');
     background-size: 70%;
     background-position: 97% 0px;
     background-repeat: no-repeat;
