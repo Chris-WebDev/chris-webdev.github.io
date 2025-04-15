@@ -1,212 +1,275 @@
 .code-crsl {
-  height: 100%
-}
-
-.code-block {
-  background-color: #121212;
-  border: 1px solid #feffef;
-  padding: 10px;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-
-code.tag {
-  padding: 1px;
-  border-radius: 3px;
-  color: #121200;
-  background-color: #dfc9ad;
-}
-
-code.gren01 {
-  color: #90ed8d;
-}
-
-code.insP01 {
-  color: #ff4ade;
-}
-
-code.outY01 {
-  color: #f9ff59;
-}
-
-code.orng01 {
-  color: #7d3200;
-}
-
-code.tan001 {
-  color: #dfc9ad;
-}
-
-.pos-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100px;
-  height: 30px;
-  background: #000000;
-  border: 0;
-  border-radius: 0px 5px 0px 5px;
-  color: white;
-}
-
-.code-carousel-wrapper {
-  position: relative;
-  width: calc(100%);
-  height: 100vh;
-  margin: 0 auto;
-  perspective: 2000px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  /* Align the carousel to the bottom of the wrapper */
-}
-
-.code-carousel {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  /* Height of the container, adjust as needed */
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-in-out;
-}
-
-.code-card {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  transform-origin: center center -500px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
-  opacity: 0.7;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-sizing: border-box;
-  z-index: -1;
-}
-
-.code-card::before {
-  background-size: 200px; /* Adjust as needed (cover, contain, etc.) */
-  background-position: center;
-  background-repeat: no-repeat;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2; /* Place it behind the card's content */
-}
-
-.code-card.active {
-  transform: translateZ(100px) scale(.5);
-  opacity: 1;
-  z-index: 10;
-  transform-origin: center bottom !important;
-  margin-bottom: 0 !important;
-}
-
-.code-card.active-expanded {
-  background-color: #121212 !important; /* Red background for the active card */
-}
-
-.code-card.active-expanded::before {
-  background-image: none !important;
-  background-color: transparent !important;
-}
-
-.code-card.expanding-up {
-  transform: translateZ(100px) scale(1.2);
-  overflow-y: visible;
-  height: 400px;
-}
-
-.code-card.expanding-up::-webkit-scrollbar {
-  width: 8px; /* Adjust the width of the scrollbar */
-}
-
-.code-card.expanding-up::-webkit-scrollbar-track {
-  background-color: #720000; /* Light grey background for the track */
-}
-
-.code-card.expanding-up::-webkit-scrollbar-thumb {
-  background-color: #720000; /* Red color for the thumb */
-  border-radius: 4px; /* Optional: round the corners of the thumb */
-}
-
-.code-card.expanding-up::-webkit-scrollbar-thumb:hover {
-  background-color: #720000; /* Darker red on hover (optional) */
-}
-
-#left-cntrl.dark-cntrl {
-  background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
-  background-size: contain;
-  rotate: 180deg;
-}
-#right-cntrl.dark-cntrl {
-  background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
-  background-size: contain;
-}
-#left-cntrl,
-#right-cntrl {
-  cursor: pointer;
-  font-size: 24px;
-  color: #333;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  z-index: 1;
-}
-
-#right-cntrl {
-  position: absolute;
-  right: 0;
-  top: 80%;
-  margin-right: 115px;
-}
-
-#left-cntrl {
-  position: absolute;
-  left: 0;
-  top: 80%;
-  margin-left: 100px;
-}
-.code-card {
-  position: absolute;
-  width: 300px; /* Controls the width of the cards */
-  height: 200px; /* Controls the height of the cards */
-  /* ... other styles ... */
-}
-
-button.explore-button {
-  height: 30px;
-  width: 75%;
-  background-color: #720000;
-  border: none;
-  box-shadow: white 0px 5px 5px 0px;
-  color: white;
-}
-
-@media (max-width: 1347px) {
-  /* ... other mobile styles ... */
+    height: 100%;
+    display: initial;
+  }
+  
+  .code-block {
+    background-image: radial-gradient(#121212, #000);
+    border: 1px solid #feffef;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    height: 240px;
+    width: 82%;
+    overflow-y: scroll;
+    font-size: 1.8em;
+  }
+  
+  button.copy-button.pos-right {
+    width: 100px;
+    height: 30px;
+    border-radius: 0px 5px;
+    background-image: linear-gradient(76deg, black, #121212);
+    color: white;
+    box-shadow: inset #ffffff80 1px -2px 2px;
+    font-size: 1.4em;
+  }
+  
+  button.explore-button {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px 5px;
+    background-image: linear-gradient(76deg, rgb(255, 255, 255), #d8d8d8);
+    color: rgb(0, 0, 0);
+    box-shadow: inset #00000080 1px -2px 2px;
+    font-size: 1.4em;
+    margin: 10px 0px;
+  }
+  
+  code.tag {
+    padding: 1px;
+    border-radius: 3px;
+    color: #121200;
+    background-color: #dfc9ad;
+  }
+  
+  code.gren01 {
+    color: #90ed8d;
+  }
+  
+  code.insP01 {
+    color: #ff4ade;
+  }
+  
+  code.outY01 {
+    color: #f9ff59;
+  }
+  
+  code.orng01 {
+    color: #7d3200;
+  }
+  
+  code.tan001 {
+    color: #dfc9ad;
+  }
+  
+  .pos-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
   .code-carousel-wrapper {
-    align-items: start;
+    margin-top: 100px;
+    position: relative;
+    width: calc(100%);
+    height: 100vh;
+    margin: 0 auto;
+    perspective: 1100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align the carousel to the bottom of the wrapper */
   }
-}
-@media (max-width: 600px) {
-  /* ... other mobile styles ... */
+  
   .code-carousel {
-    width: auto;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    /* Height of the container, adjust as needed */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
   }
+  
+  .code-card {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    transform-origin: center center -500px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
+    opacity: 0.7;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: -1;
+  }
+  
+  .code-card::before {
+    background-size: 200px; /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Place it behind the card's content */
+  }
+  
+  .code-card.active {
+    transform: translateZ(100px) scale(.5);
+    opacity: 1;
+    z-index: 10;
+    transform-origin: center bottom !important;
+    margin-bottom: 0 !important;
+    color: white;
+  }
+  
+  .code-card.active-expanded {
+    background-color: #720000 !important; /* Red background for the active card */
+  }
+  
+  .code-card.active-expanded::before {
+    background-image: none !important;
+    background-color: transparent !important;
+  }
+  
+  .code-card.expanding-up {
+    transform: translateZ(100px) scale(1.2);
+    overflow-y: visible;
+    height: 400px;
+  }
+  
+  .code-card.expanding-up::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+  }
+  
+  .code-card.expanding-up::-webkit-scrollbar-track {
+    background-color: #720000; /* Light grey background for the track */
+  }
+  
+  .code-card.expanding-up::-webkit-scrollbar-thumb {
+    background-color: #720000; /* Red color for the thumb */
+    border-radius: 4px; /* Optional: round the corners of the thumb */
+  }
+  
+  .code-card.expanding-up::-webkit-scrollbar-thumb:hover {
+    background-color: #720000; /* Darker red on hover (optional) */
+  }
+  
+  #left-cntrl.dark-cntrl {
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    rotate: 180deg;
+  }
+  #right-cntrl.dark-cntrl {
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/light-cntrl.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #left-cntrl p{ transform: rotateZ(180deg); margin-right: 120px; }
+  #right-cntrl p{ margin-right: 120px;}
+
+  #left-cntrl,
+  #right-cntrl {
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 1;
+  }
+  #left-cntrl:hover,
+  #right-cntrl:hover {
+    border-radius: 100px;
+    background-color: #0000004b;
+    width: 36px;
+    height: 36px;
+  }
+  #code-cntrl {
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      top: 70%;
+  }
+  #right-cntrl {
+    position: absolute;
+    right: 0;
+  }
+  #left-cntrl {
+    position: absolute;
+    left: 0;
+  }
+
+.active-expanded.expanding-up p:nth-child(3) {
+    font-weight: 800;
 }
+#wrapper > section.code-crsl.radial12 > div > div.code-carousel-wrapper > div > div.code-card.flex-col.active.active-expanded.expanding-up > div.info-wrapper {
+  font-size: 1.4em;
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+.active .image-container {
+  /* Adjust as needed for layout */
+  margin-bottom: 10px; /* Example spacing */
+  display: flex;
+  justify-content: center; /* Example centering */
+}
+
+.active .code-image {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Maintain aspect ratio */
+  display: block; /* Prevent extra spacing below inline elements */
+  position: absolute;
+  top: 35px;
+  left: 87px;
+}
+.image-container {
+  display: none;
+}
+.image-container img{
+  height: 24px
+}
+
+.code-image {
+  display: none; /* Prevent extra spacing below inline elements */
+}
+
+#wrapper > section.code-crsl.radial12 > div > div.code-carousel-wrapper > div > div.code-card.flex-col.active.active-expanded.expanding-up > h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+  @media (max-width: 1347px) {
+    /* ... other mobile styles ... */
+    .code-carousel-wrapper {
+      align-items: start;
+    }
+  }
+  @media (max-width: 600px) {
+    /* ... other mobile styles ... */
+    .code-carousel {
+      width: auto;
+    }
+  }
+  

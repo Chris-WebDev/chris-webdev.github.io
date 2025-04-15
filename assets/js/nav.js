@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
     const scrollFromBottom = documentHeight - windowHeight - scrollY;
 
     const switchThreshold = 150;     // Threshold for the instant switch
-    const scaleStart = 50;         // ScrollY to start scaling the nav
+    const scaleStart = 50.3;         // ScrollY to start scaling the nav
     const scaleEnd = 10;           // ScrollY to be fully scaled (either 0 or 1)
     const bottomShrinkStart = 200; // Distance from bottom to start shrinking/fading
     const bottomShrinkEnd = 50;      // Distance from bottom to be fully gone/shrunk
@@ -30,14 +30,14 @@ window.addEventListener("scroll", function () {
         // Control scaling of nav at the top
         if (scrollY > scaleStart) {
             const scaleFactor = Math.max(0, 1 - (scrollY - scaleStart) / (switchThreshold - scaleStart));
-            nav.style.transform = `translateX(-50%) scale(${scaleFactor})`;
+            nav.style.transform = `translateX(-50.3%) scale(${scaleFactor})`;
             nav.style.opacity = scaleFactor; // Optionally fade out with scale
             nav.style.width = `calc(100% - 200px)`; // Shrink width as it scales
             nav.style.marginLeft = "50%"; // Maintain center as it shrinks
         } else {
-            nav.style.transform = `translateX(0) scale(1)`; // Fully scaled in
+            nav.style.transform = `translateX(-4px) scale(1)`; // Fully scaled in
             nav.style.marginLeft = "0";
-            nav.style.width = `90%`;
+            nav.style.width = `calc(100% - 190px)`;
             nav.style.opacity = 1;
             if (scrollY <= scaleEnd) {
                 // Optionally set initial scale if you want it to start smaller
@@ -52,9 +52,9 @@ window.addEventListener("scroll", function () {
         nav.style.position = "fixed";
         nav.style.top = "50px";
         nav.style.left = "50%";
-        nav.style.transform = "translateX(-50%) scale(1)"; // Reset scale for scrolled
+        nav.style.transform = "translateX(-50.3%) scale(1)"; // Reset scale for scrolled
         nav.style.marginLeft = "0";
-        nav.style.width = `calc(100% - 300px)`;
+        nav.style.width = `calc(100% - 312px)`;
         nav.style.opacity = 1;
         navUl.style.opacity = 1;
         navFlexCol.style.opacity = 1;

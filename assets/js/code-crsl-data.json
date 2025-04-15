@@ -1,49 +1,54 @@
 {
-  "projects": [
-    {
-      "id": "project1",
-      "title": "Project A",
-      "description": "Description of Project A.",
-      "technologies": ["PHP"],
-      "explore_url": "project-a",
-      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-a.php.txt",
-      "template": "project-a-temp"
-    },
-    {
-      "id": "project2",
-      "title": "Project B",
-      "description": "Description of Project B.",
-      "technologies": ["JavaScript"],
-      "explore_url": "project-b", 
-      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-b.php.txt",
-      "template": "project-b-temp"
-    },
-    {
-      "id": "project3",
-      "title": "Project C",
-      "description": "Description of Project C.",
-      "technologies": ["PHP"],
-      "explore_url": "project-c", 
-      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-c.php.txt",
-      "template": "project-c-temp"
-    },
-    {
-      "id": "project4",
-      "title": "Project D",
-      "description": "Description of Project D.",
-      "technologies": ["PHP"],
-      "explore_url": "project-d", 
-      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-d.php.txt",
-      "template": "project-d-temp"
-    },
-    {
-      "id": "project5",
-      "title": "Project E",
-      "description": "Description of Project E.",
-      "technologies": ["PHP"],
-      "explore_url": "project-e", 
-      "code_file": "https://chris-webdev.github.io/uploads/text/code/project-e.php.txt",
-      "template": "project-e-temp"
-    }
-  ]
-}
+    "codeProjects": [
+      {
+        "id": "project1",
+        "title": "Python - Recursive",
+        "description": "Recursive python, how many beers on the wall?",
+        "technologies": ["PHP"],
+        "explore_url": "https://github.com/Chris-WebDev/python", 
+        "code_file": "https://raw.githubusercontent.com/Chris-WebDev/python/main/functions_py/def_Functions.py",
+        "template": "project-a-temp",
+        "image_url": "https://chris-webdev.github.io/uploads/images/icon/web/python.svg"
+      },
+      {
+        "id": "project2",
+        "title": "JavaScript",
+        "description": "Custome User Interationctions using JS",
+        "technologies": ["JavaScript"],
+        "explore_url": "https://github.com/Chris-WebDev/javascript", 
+        "code_file": "https://raw.githubusercontent.com/Chris-WebDev/javascript/refs/heads/main/js_hover_effect/hover_effect.js?token=GHSAT0AAAAAADBYSQJOBHE2PZDKFQG2PCZSZ757HLQ",
+        "template": "project-b-temp"
+        ,"image_url": "https://chris-webdev.github.io/uploads/images/icon/web/js.png"
+      },
+      {
+        "id": "project3",
+        "title": "Flutter",
+        "description": "Mobile Application Developer",
+        "technologies": ["Flutter"],
+        "explore_url": "https://github.com/Chris-WebDev/mobileApplications", 
+        "code_file": "https://raw.githubusercontent.com/Chris-WebDev/mobileApplications/refs/heads/main/README.md",
+        "template": "project-c-temp",
+        "image_url": "https://chris-webdev.github.io/uploads/images/icon/web/flutter.svg"
+      },
+      {
+        "id": "project4",
+        "title": "Three.js",
+        "description": "3d Web Elements with Three.js",
+        "technologies": ["Three.js"],
+        "explore_url": "https://github.com/Chris-WebDev/three.js", 
+        "code_file": "https://raw.githubusercontent.com/Chris-WebDev/python/main/functions_py/def_Functions.py",
+        "template": "project-d-temp",
+        "image_url": "https://chris-webdev.github.io/uploads/images/icon/web/node-js.svg"
+      },
+      {
+        "id": "project5",
+        "title": "SQL",
+        "description": "Data Handling and storage through SQL",
+        "technologies": ["SQL"],
+        "explore_url": "https://github.com/Chris-WebDev/sql", 
+        "code_file": "https://raw.githubusercontent.com/Chris-WebDev/sql/refs/heads/main/countingSelections.sql",
+        "template": "project-e-temp",
+        "image_url": "https://chris-webdev.github.io/uploads/images/icon/web/sql.svg"
+      }
+    ]
+  }

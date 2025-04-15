@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": "project1",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img1.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-br.png",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/br-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/br-desk.png",
       "title": "Baumans Roofing LLC",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectOne.txt",
       "explore_url": "project-one.html",
@@ -18,8 +18,8 @@
     },
     {
       "id": "project2",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img2.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-scf.png",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/scf-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/scf-desk.png",
       "title": "Swallow Crest Farm",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectTwo.txt",
       "explore_url": "project-two.html",
@@ -34,8 +34,8 @@
     },
     {
       "id": "project3",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img5.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-rc.png",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/rc-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/rc-desk.png",
       "title": "React JS",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectThree.txt",
       "explore_url": "project-three.html",
@@ -50,8 +50,8 @@
     },
     {
       "id": "project4",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img3.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-ff.png",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/ff-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/ff-desk.png",
       "title": "Forever Friends",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFour.txt",
       "explore_url": "project-four.html",
@@ -66,8 +66,8 @@
     },
     {
       "id": "project5",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img4.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-wp.png",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/ev-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/ev-desk.png",
       "title": "WordPress Expirence",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFive.txt",
       "explore_url": "project-five.html",
@@ -82,9 +82,9 @@
     },
     {
       "id": "project6",
-      "imageUrl": "https://chris-webdev.github.io/uploads/images/icon/img6.png",
-      "imageHero": "https://chris-webdev.github.io/uploads/images/hero/hero-mock-gv1.png",
-      "title": "Github V1",
+      "imageUrl": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-url/tm-mobile.png",
+      "imageHero": "https://chris-webdev.github.io/uploads/images/default/hero-slider/img-hero/tm-desk.png",
+      "title": "Trina Marie Photography",
       "descriptionFile": "https://chris-webdev.github.io/uploads/text/web/ProjectFive.txt",
       "explore_url": "project-five.html",
       "technologies": [],

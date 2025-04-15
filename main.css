@@ -8,16 +8,60 @@ This page does not include styles for:
     orb-css.css
 
 */
-@font-face {
-    font-family: 'Krona One';
-    src: url("https://chris-webdev.github.io/uploads/fonts/Krona_One/KronaOne-Regular.ttf") format('truetype');
+*{display: block; position: relative; margin: 0; padding: 0;}
+title{display: none;}
+body {
+    font-family: 'Roboto';
+    font-size: .5em;
+    font-weight: 400;
+    color: white;
+    background-color: #121212;
+    overflow-x: hidden;
+    max-width: 1897px;
+    margin: auto;
 }
 
-.krona-one-regular {
-    font-family: "Krona One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+a{text-decoration: none; color: #fd6262e6;}
+.flex-col p{font-size: large}
+/* Target the whole scrollbar */
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+  
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-image: radial-gradient(#720000, transparent, transparent); /* Solid red */
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background-image 0.3s ease-in-out; /* Transition for the entire background image */
   }
+  
+  /* Handle on hover (fill in with red) */
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: radial-gradient(#720000, #72000080, #72000090); /* Red sides, transparent center */
+  }
+/* Track (the area behind the handle) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Color of the scrollbar track */
+    border-radius: 6px;
+    height: 150px;
+}
+
+/* Corner (where vertical and horizontal scrollbars meet) */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Or any color you prefer */
+}
+@font-face {
+    font-family: 'Krona One';
+    src: url("http://localhost/chris-webdev.github.io-lh/uploads/fonts/Krona_One/KronaOne-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('http://localhost/chris-webdev.github.io-lh/uploads/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 1 1000; /* Supports a range of weights */
+    font-style: normal; 
+}
 
 .roboto {
     font-family: "Roboto", sans-serif;
@@ -28,6 +72,20 @@ This page does not include styles for:
     "wdth" 100;
 }
 
+#wrapper{
+    width: calc(100% - 200px);
+    font-family: 'Roboto Thin';
+    align-content: center;
+    margin: 0px 100px;
+    padding: 100px 0px;
+}
+
+.krona-one-regular {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 /* Global Colors */
 .blk {
     background-color: black;
@@ -36,46 +94,28 @@ This page does not include styles for:
 .wht{background-color: white;}
 .radial72 { z-index: 1;background-image: radial-gradient(at right, #8e0000, #720000, #720000); }
 .radial12 { background-image: radial-gradient(at center, #1e1e1e, #121212, #121212);}
-.btnwhite{background-color: #ffffff;}/* controlls light button */
-.btnblack{background-color: #000000;}/* controlls dark button */
-.btnred {
-    background-color: #fd6262e6;
-    color: white
-}/* controlls acitve button */
 /* End of Global Colors */
-body {
-    font-family: 'Roboto Thin';
-    font-size: .5em;
-    font-weight: 400;
-    color: white;
-    background-color: #121212;
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
-    width: 100vw;
-}
 
-.hp-hero ul li {
-    padding-left: 25px; /* Space for the icon */
-    padding: 20px 0px 0px 0px ;
-    z-index: 1;
-    position: relative;
-    z-index: 1;
+/* Home Hero Styles */
+div.hero-list > ul {
+    width: 300px;
+    text-align: end;
+    list-style: none;
+    margin-left: 218px; 
 }
-.hp-hero ul.check-list li:hover {
-    transform: scale(1.1); /* Increase size on hover (adjust value as needed) */
-    list-style-image: url('https://chris-webdev.github.io/uploads/images/icon/checkmark.png');
-    color: #720000; /* Change text color on hover (replace with your desired color) */
+.hp-hero h1:nth-child(1){
+    font-size: 4rem;
+    font-weight: 900;
 }
-.hp-hero ul {
-    position: absolute;
-    float: bottom;
-    width: 18%;
-    list-style-image: url('https://chris-webdev.github.io/uploads/images/icon/checkmark-white.png');
-    font-size: medium;
-    text-align: center;
-    margin-top: 50vh;
-    margin-left: 39%;
+.hp-hero h1:nth-child(3){
+    font-size: 2.5rem;
+    margin-left: 227px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.check-list li {
+    background: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/checkmark-white.png') no-repeat left center; /* Adds your custom image */
+    margin-top: 20px;
 }
 
 .flex-col {
@@ -84,98 +124,69 @@ body {
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
-#wrapper{
-    margin: 0;
-    font-family: 'Roboto Thin';
-}
-
-/* Home Page Hero */
-section.hp-hero{
-    margin-bottom: 10px;
+/* Full Width Background - remove wrapper margin */
+section.fl-w-bck{
     width: 100vw;
-    height: 100vh;
-    background-image: radial-gradient(circle at 50% 200%,#830000, #830000be, #830000a0, #121212, #121212);
+    min-height: 100vh;
+    margin-left: -100px; /* clear wrapper margin */
+    padding-left: 100px;/* Align padding */
+    margin-bottom: -100px;/* Align padding */
 }
-
-/* About Page Hero */
-section.ap-hero{
-    margin-bottom: 10px;
-    width: 100vw;
-    height: 100vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-y: 61%;
+.hp-hero {    
+    height: auto;
+    background-image: radial-gradient(circle at 45% 125% #720000be, #72000077, #121212c5 , #121212);
+    font-size: large;
 }
-/* Holds content for hero section off home page*/
-.hero-content-holder {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex; 
-    flex-direction: column;
-
-    align-content: center;
-}
-.hp-hero h1{
-    font-family: "Krona One", sans-serif;
-    width: 100%;
-    position: absolute;
-    margin-top: 10vh;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 4;
-}
-.hp-hero p{
-    position: absolute;
-    margin-top: 20vh;
-    width: 100%;
-    font-size: medium;
-    text-align: center;
-}
-.hp-btn-row {
-    position: absolute;
-    margin-top: 27vh;
+.hero-container {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    align-self: center;
-}
-.hp-hero h2{
-    font-family: "Krona One", sans-serif;
-    width: 100%;
-    position: absolute;
-    margin: 44vh 0px  0px 0px;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 4;
-}
-/* Dividers dark and Light */
-.hero-divider.dvdr_drk{
-    height: 100px;
-    width: 100%;
-    margin-top: -100px;
-}
-.hero-divider.dvdr_drk img{
-    width: 100%;
-    height: 100px;
-    z-index: 100;
-    position: relative;
-}
-.hero-divider.btm_dark img{
-    width: 100%;
-    height: 100px;
-    z-index: 1;
+    flex-direction: column;
+    width: calc(100% - 200px);
+}  
+/* 
+Three JS Canvas Render
+Veiw the Three js index at:
+    assets > 3d-render > hero-home > dist > index.html
+*/
+#threeCanvas {
+    overflow: hidden;
     position: absolute;
     bottom: 0;
-    box-shadow: 0px 4px 4px #ffffff80;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the canvas in the background */
 }
+.foreground-content {
+    position: relative;
+    z-index: 2; /* Keep this content on top of the Three.js canvas */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+#threejs-container {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Placed behind blue to remove scroll behavoir */
+}
+
+#threeCanvas {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    max-height: 700px;
+    max-width: 85%;
+    transform: translateX(24%);
+}
+/* End of Three.js */
 
 .stripe {
     width: 100%;
@@ -192,67 +203,25 @@ section.ap-hero{
     justify-content: center;
 }
 
-button{
+button {
     font-family: "Krona One", sans-serif;
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 130px;
     border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
 }
-@keyframes trace {
-    0% {
-        top: -7.5px; /* Half of the dot's height */
-        left: 0;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    }
-    25% {
-        top: -7.5px; /* Half of the dot's height */
-        left: 100%;
-        transform: translateX(-50%);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-    50% {
-        top: 100%;
-        left: 100%;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    }
-    75% {
-        top: 100%;
-        left: 0;
-        transform: translateY(-50%);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-    100% {
-        top: -7.5px; /* Half of the dot's height */
-        left: 0;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    }
-}
+  
 .btn-container {
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center; /* Center the button and glow */
     border-radius: 5px;
-    position: relative;
-    padding: 5px;
-    padding-top: 0px;
-    padding-left: 8px;
-    width: 150px; /* Width of the image */
-    height: 50px; /* Height of the image */
+    position: relative; /* Needed for positioning the pseudo-element */
+    overflow: hidden; /* Clip the rotating background if needed */
 }
-.glow-circle {
-    width: 5px;
-    height: 5px;
-    background-color: #fd6262e6; /* Red glow */
-    border-radius: 50%;
-    position: absolute;
-    animation: trace 4s infinite linear; /* Circular motion around the border */
-}
-
-.about-wrapper {
-    width: calc(100% - 215px);
-    height: 30%;
-    margin: 100px 100px 0px 100px;
-    font-size: medium;
-}
-
+  
 .work-wrapper {
     width: calc(100vw - 200px);
     height: 100vh;
@@ -263,71 +232,193 @@ button{
     margin: auto;
 }
 
-/* Single Page Builder */
-#about-image-container {
-    width: 400px;
-}
-#about-image-container img{ max-width: 100%; }
 
-.image-grid-lightbox {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.image-grid-lightbox img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-}
-
-/* Basic lightbox styles */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain; /* Show the entire image within the bounds */
-}
-
-.lightbox.active {
+/* Tech Stack Styling */
+.gradient-over {
+    font-size: 3em;
+    height: fit-content;
+    background-image: radial-gradient(at 48% 55%, transparent -54%, #121212 58%), url('http://localhost/chris-webdev.github.io-lh/uploads/images/default/aboutGit/teck-stack.png');
+    background-size: 68%;
+    background-repeat: no-repeat;
+    background-position-y: 56%;
+    background-position-x: -30%;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-
-@media screen and (max-width: 900px) {
-    .about-wrapper { 
-        width: 96%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        overflow: visible;
-    }
-    .radial72 .about-wrapper { 
-        width: 96%;
-        display: flex;
-        flex-direction: row;
-        overflow: visible;
-    }
-}
-
-
-#footer-wrapper {
-    height: 500px;
+.tech-stack-wrapper {margin-top: -100px;}
+.tech-stack{
+    height: 100%;
     width: 100%;
-    background-color: #000000;
-    z-index: 10;
+    align-content: end;
+    justify-content: end;
+    display: inherit;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+.icon{
+    width: 550px;
+    font-size: 1em;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.tech-stack p {
+    margin-top: 100px; /* Default margin for all <p> tags */
+    padding: 20px; /* Default padding for all <p> tags */
+    background-size: 24px 24px; /* Adjust icon size */
+    background-position: left center; /* Align icon to the left */
+    background-repeat: no-repeat; /* Prevent tiling */
+    text-align: center;
+}
+
+#tech-stack-wrapper h3 {padding: 5px 0px 20px 0px}
+/* Style for each <p> using nth-child */
+.gradient-over h1:nth-child(1) {
+        font-size: 5rem;
+}
+/* Style for each <p> using nth-child */
+.gradient-over h1:nth-child(2) {
+        margin-left: 71px;
+        font-size: 3rem;
+}
+/* Style for each <p> using nth-child */
+.tech-stack p:nth-child(1) {
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/css.svg');
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    margin-top: -150px;
+    background-size: 10%;
+    background-position: 7%;
+}
+
+/* Style for each <p> using nth-child */
+.tech-stack p:nth-child(2) {
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/css.svg');
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 7%;
+}
+
+.tech-stack p:nth-child(3) {
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/node-js.svg');
+    background-size: 10%;
+    margin-left: 100px;
+    background-position: 7%;
+    background-repeat: no-repeat;
+}
+
+.tech-stack p:nth-child(4) {
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/js.png');
+    background-size: 10%;
+    background-position: 6%;
+    background-repeat: no-repeat;
+}
+.tech-stack p:nth-child(5) {
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/json.svg');
+    background-size: 15%;
+    background-position: 4%;
+    background-repeat: no-repeat;
+}
+
+style {display: none;}
+
+/* End of Tech Stack  */
+
+/* Work Page */
+.git-icon {
+    width: 40px;
+    background-image: url('http://localhost/chris-webdev.github.io-lh/uploads/images/icon/web/git.png');
+    background-size: 100%;
+    background-position: 4%;
+    background-repeat: no-repeat;
+}
+
+.wp-hero-background {
+    background-image: radial-gradient(114% 94%, transparent -16%, #121212 39%), url('http://localhost/chris-webdev.github.io-lh/uploads/images/default/aboutGit/about-pae.png');
+    background-size: 70%;
+    background-position: 97% 0px;
+    background-repeat: no-repeat;
+    background-position-y: -84px;
+}
+
+
+/* From Uiverse.io by nima-mollazadeh */ 
+.button {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ffb7b7, #ffd6d6, #ffbfe0);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+  }
+  
+  .button:hover::before {
+    opacity: 0.7;
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #ffbcbc, #fd6262e6, #fd6262e6);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+  }
+  
+  .button:hover:after {
+    opacity: 1;
+  }
+  
+/*
+  .btn-container::before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    right: -2px;
+    height: 140px;
+    width: 140px;
+    bottom: 0;
+    /* left: 0; 
+    background-image: repeating-conic-gradient(from 0deg, /* Starting angle (optional) 
+    #720000 0deg, 
+    #720000 5%, 
+    #fd6262e6 6%, 
+    transparent 7%, 
+    transparent 40%, 
+    #720000 50%);
+    animation: rotateConicBackground 5s linear infinite;
+    transform-origin: center center;
+    z-index: -1;
+    border-radius: inherit;
+  }
+  
+  @keyframes rotateConicBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .btn-wrapper {
+    z-index: 1;
+}
+*/

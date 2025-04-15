@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CWT Presents | Jonior Developer</title>
+        <!-- Site: Favicon -->
+        <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
+        <!-- CSS files: -->
+        <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
+        <!-- <link rel="stylesheet" href="http://localhost/chris-webdev.github.io/assets/css/orb-css.css"> -->
+        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
+        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
+        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/work.css"><!--Slider CSS-->
+        <!-- JavaScript Files: -->
+        <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- script.js = Main JS -->
+        <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
+        <script src="https://chris-webdev.github.io/assets/js/code-controlls.js"></script><!-- Nav Scripts -->
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+<body>
+<div id="nav-holder">
+    <!-- 
+        Called w/ assets/js/script.js
+        Built: assets/header/nav.html
+    -->
+</div>
+<div id="wrapper">
+    <section class="fl-w-bck hp-hero wp-hero-background ">
+        <div class="hero-container"><!-- Holds content for hero section -->
+            <h1 class="krona-one-regular">Dream BIGGER<h1>
+            <h1 class="krona-one-regular">A Github that Doesnt</h1>
+            <h1 class="krona-one-regular">Leave You Hanging</h1>
+        </div>
+    </section>
+
+    <section class="code-crsl radial12">
+        <div class="stripe blk krona-one-regular">
+            <h1>Explore the <span class="git-icon"></span> Repositories</h1>
+        </div>
+    
+        <div id="code-cntrl">
+            <div id="left-cntrl" class="dark-cntrl"></div>
+            <div id="right-cntrl" class="dark-cntrl"></div>
+        </div>
+    
+        <div class="code-carousel-wrapper">
+            <div class="code-carousel">
+                </div>
+        </div>
+    </section>
+
+    <section>
+    <div class="cust-slider-wrapper">
+        <div class="img-grid">
+            <div class="project-item" data-index="0">
+                <div class="card-outline"></div>
+                <img src="path/to/image1.jpg" alt="Image 1" class="card-image">
+                <div class="card-content">
+                    <h3 class="krona-one-regular">Error Loading</h3>
+                    <p>Error Loading Web Projects please come back</p>
+                </div>
+            </div>
+            </div>
+    </div>
+    </section>
+        <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const sliderWrapper = document.querySelector('.cust-slider-wrapper');
+                const slider = document.querySelector('.img-grid');
+                let projectItems = [];
+                 let numItems = 0;
+                let projectData = {
+                projects: []
+                };
+                let currentIndex = 0;
+                let isScrolling = false;
+                const scrollDebounceDelay = 50; // Adjust debounce as needed
+                const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html');
+                const isWorkPage = window.location.pathname.includes(
+                'https://chris-webdev.github.io/web-projects.html'); // Adjust if your work page URL is different
+
+                function loadProjectData() {
+                    fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
+                        .then(response => response.json())
+                .then(data => {
+                
+                projectData = data;
+                let projectsToDisplay = [];
+
+                if (isHomePage) {
+                projectsToDisplay = data.projects.slice(0, 3); // Only load the first 3 projects on the homepage
+                } else if (isWorkPage) {
+                    projectsToDisplay = data.projects; // Load all projects on the work page
+                } else {
+                    projectsToDisplay = data.projects; // Load all projects on the work page
+                }
+                
+                    numItems = projectsToDisplay.length;
+                    renderSlider(projectsToDisplay);
+                    updateActiveCard(currentIndex);
+                    })
+                    .catch(error => console.error('Error loading project data:', error));
+                    }
+
+                function renderSlider(projects) {
+                slider.innerHTML = '';
+                projectItems = projects.map(project => {
+                const projectItem = document.createElement('div');
+                projectItem.classList.add('project-item');
+                projectItem.dataset.projectId = project.id;
+
+                projectItem.innerHTML = `
+                    <div class="card-image">
+                        <img src="${project.imageHero}" alt="${project.title}">
+                        <img src="${project.imageUrl}" alt="${project.title}">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="krona-one-regular">${project.title}</h3>
+                        <p id="card-description-${project.id}"></p>
+                        <a id="read-more-link" href="https://chris-webdev.github.io/assets/pg-build-temp/project.html?id=${project.id}" class="read-more-link">
+                        Read More <span class="arrow-icon"></span>
+                        </a>
+                    </div>
+                `;
+                slider.appendChild(projectItem);
+                return projectItem;
+                });
+            }
+            if (sliderWrapper && slider) {
+            loadProjectData();
+            } else {
+            console.error('Slider wrapper or slider element not found.');
+            }
+            });
+    </script>
+</div>
+
+<div class="container">
+    <div class="orb" id="left"></div>
+    <div class="orb" id="right"></div>
+    <div class="orb" id="up"></div>
+    <div class="orb" id="down"></div>
+</div>
+
+</body>
+<div id="footer-holder">
+</div>
+</html>

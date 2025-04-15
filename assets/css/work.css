@@ -1,0 +1,55 @@
+script {display: none;}
+.cust-slider-wrapper {
+    overflow: hidden; /* if you want to contain the grid */
+  }
+  
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    grid-template-rows: repeat(2, auto); /* 2 rows, auto height */
+    gap: 20px; /* Adjust as needed */
+    padding: 0; /* Reset any padding that might affect the layout */
+    margin: auto;
+    height: auto;
+    max-width: auto;
+  }
+  
+  .project-item {
+    background-color: #111; /* Dark background */
+    box-sizing: border-box; /* important for consistent sizing */
+  }
+  
+  .card-image {
+    display: flex;
+    max-height: 200px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: #ffffff91 0px 0px 5px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-image > img:nth-child(1){ object-fit: cover;}
+  .card-image > img:nth-child(2){ transform: translateX(-40px);}
+  #tech-stack-wrapper > div.cust-slider-wrapper > div > div.project-item.active > div.card-content > h3{ margin: 5px 0px;}
+  #read-more-link{ margin-top: 2px;}
+  
+  .card-content {
+    font-size: large;
+  }
+
+  /* For smaller screens, stack the items */
+  @media (max-width: 768px) {
+    .cust-slider {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+      grid-template-rows: auto;
+    }
+  }
+

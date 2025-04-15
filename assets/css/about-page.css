@@ -1,0 +1,98 @@
+.text-content p{font-size: large}
+.text-content h1{font-size: larger; font-family: 'Krona'}
+.ap-hero-background {
+    background-image: radial-gradient(transparent 10%, #121212 71%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/about-1.png');
+    background-size: 110%;
+    background-position: -81% 41%;
+}
+#about-page-content {
+    min-width: calc(100% - 200px);
+    min-height: 100vh;
+    margin: 100px auto;
+}
+#wrapper.about-page {
+    background-image: radial-gradient(transparent -100%, #121212 34%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/ap-page.png');
+    background-size: 128%;
+    background-position: -1% 60vh;
+}
+.flow-stack {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Hover Effect */
+#about-page-content {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    height: 250px;
+    width: 100%;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.large-rectangle {
+    width: 900px;
+    height: 200px;
+    background-color: #000;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.small-rectangles {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.small-rectangle {
+    width: 30px;
+    height: 20px;
+    background-color: #000;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+#static-image-hover-holder {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    animation: none;
+}
+
+.float-bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

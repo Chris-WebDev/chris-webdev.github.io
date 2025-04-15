@@ -7,16 +7,15 @@
     <!-- Site: Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
     <!-- CSS files: -->
-    <link rel="stylesheet" href="main.css"><!-- Main CSS -->
-    <!--<link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> Orb CSS -->
-    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css">
+    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
+    <!-- <link rel="stylesheet" href="http://localhost/chris-webdev.github.io/assets/css/orb-css.css"> -->
     <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
     <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/cust-slider.css"><!--Slider CSS-->
     <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
     <!-- JavaScript Files: -->
-    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
+    <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- script.js = Main JS -->
     <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
-    <script src="https://chris-webdev.github.io/assets/js/slider.js"></script><!-- Nav Scripts -->
+    <script src="https://chris-webdev.github.io/assets/js/slider.js"></script><!-- Slider Scripts -->
     <script src="https://chris-webdev.github.io/assets/js/code-controlls.js"></script><!-- Nav Scripts -->
 
     <!-- Google Fonts -->
@@ -25,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
 <div id="nav-holder">
 <!-- 
     Called w/ script.js
@@ -32,151 +32,92 @@
 -->
 </div>
 <div id="wrapper">
-<!-- Home Page - Hero Section (hp-hero)-->
-    <section class="hp-hero">
-        <h1 class="krona-one-regular">Visually Aesthetic</h1>
-        <p>Choose your bewtween light or dark preview</p>
-        <div class="hp-btn-row">
-            <div class="btn-container">
-                <button class="btnred">DARK MODE</button>
-                <div class="glow-circle"></div>
+    <!-- Home Page - Hero Section (hp-hero) full-width-background -->
+        <section class="fl-w-bck hp-hero">
+            <div class="hero-container"><!-- Holds content for hero section -->
+                <h1 class="krona-one-regular">Chris-WebTech Presents<h1>
+                <h1 class="krona-one-regular">| Your 2025 Github</h1>
+                <div class="hero-list">
+            <ul class="check-list">
+                <li>Modern Design</li>
+                <li>Flex Box Responsive</li>
+                <li>Organized Code</li>
+                <li>Light/Dark Mode</li>
+            </ul>
             </div>
-            <!--
-            <div id="space01" style="width: 20px;"></div>
+            <div id="threejs-container">
+                <!-- Holds the canvas that loads three.js from Spline-->
+                <script type="module" crossorigin src="http://localhost/chris-webdev.github.io/assets/3d-render/home-hero/dist/assets/index-BZcmvZp4.js"></script>
+                <canvas id="threeCanvas"></canvas>
+            </div><!-- End of Hero Container-->
 
-            <div class="btn-container">
-                <button class="btnwhite">LIGHT MODE</button>
-                <div class="glow-circle2"></div>
+        </section>
+        <section class="code-crsl radial12">
+            <div class="gradient-over">
+                <h1 class="krona-one-regular">Tech</h1>
+                <h1 class="krona-one-regular">Stack</h1>
+                <div class="tech-stack">
+                    <p class="icon">Front-End Styling with CSS</p>
+                    <p class="icon">User Interactions with Node.js</p>
+                    <p class="icon">Data Manipulation using JavaScript</p>
+                    <p class="icon">API Handling with JSON</p>
+                </div>
+              </div>
+                    <!-- Foreground Content -->
+            <div class="foreground-content">
+
+            <div id="code-cntrl">
+                <div id="left-cntrl" class="dark-cntrl"><p>PREV</p></div>
+                <div id="right-cntrl" class="dark-cntrl"><p>NEXT</p></div>
             </div>
-            -->
-        </div>
-        <div class="hero-list">
-        <h2 class="krona-one-regular">Chris-WebTech | Presents</h2>
-        <ul class="check-list">
-            <li>Modern Design</li>
-            <li>Flex Box Responsive</li>
-            <li>Organized Code</li>
-            <li>Light/Dark Mode</li>
-        </ul>
-        </div>
-        <!-- 
-        Floating Orbs assets/orbs-css.css
-        -->
-        <div class="container">
-            <div class="orb" id="left"></div>
-            <div class="orb" id="right"></div>
-            <div class="orb" id="up"></div>
-            <div class="orb" id="down"></div>
-        </div>
 
-        <div class="hero-divider dvdr_drk">
-            <img src="https://chris-webdev.github.io/uploads/images/dividers/hero-div-dark.png" alt="divider">
+            <div class="code-carousel-wrapper">
+                <div class="code-carousel">
+                    </div>
+            </div>
         </div>
-    </section>
+        </section>
+        <section id="tech-stack-wrapper">
 
-    <section class="radial72" style="margin-top: -20px;">
+            <div class="about-wrapper">
+                <div class="flex-col">
+                    <h1 class="krona-one-regular">Not looking for code?</h1>
+                    <h3 class="krona-one-regular">Explore my web works!</h3>
+                    <p style="max-width: 900px;">
+                        Dive into a collection of my creative web projects, carefully crafted to inspire and spark your imagination. 
+                        As a developer, I focus on intuitive navigation and seamless user experiences that make every interaction enjoyable, 
+                        not overwhelming. Whether you're seeking design inspiration or a launching point for your next project, you'll find 
+                        thoughtful solutions that balance simplicity with innovation. Let's explore the possibilities together!
+                    </p>
+                </div>
+                <div style="clear: both;"></div>
         
-        <div class="about-wrapper">
-            <div class="flex-col">
-                <h1 class="krona-one-regular" style="float: left; margin-right: 20px;">About the Work</h1>
-                <p style="width: 70%; float: left;">
-                    View exceptional Pieces from React JS to WordPress Development, a collection of 2 Years exploring 
-                    fundementals in web development as improved my understanding of standards of best practices. I enjoy 
-                    assembling large and perhaps complex web applications, I see them as a pussle that I get to shap and 
-                    create as challenging as I like.
-                </p>
-            </div>
-            <div style="clear: both;"></div>
-    
-            <div class="project-details-container flex-col">
-                <h3 id="project-title" class="krona-one-regular"></h3>
-                <p id="project-description"></p>
-                <a id="read-more-link" href="#" class="read-more-link">
-                    Read More <span class="arrow-icon"></span>
-                </a>
-            </div>
-        </div>
-    
-        <div class="cust-slider-wrapper">
-            <div class="cust-slider">
+                <div class="project-details-container flex-col">
+                    <h3 id="project-title" class="krona-one-regular"></h3>
+                    <p id="project-description"></p>
                 </div>
-        </div>
-    
-        <div class="hero-divider btm_dark">
-            <img src="https://chris-webdev.github.io/uploads/images/dividers/btm-dark.png" alt="divider">
-        </div>
-    </section>
-
-    <section class="code-crsl radial12">
-                <!-- Foreground Content -->
-        <div class="foreground-content">
-
-        <div class="stripe blk krona-one-regular">
-            <h1>Explore the Work</h1>
-        </div>
-    
-        <div id="code-cntrl">
-            <div id="left-cntrl" class="dark-cntrl"></div>
-            <div id="right-cntrl" class="dark-cntrl"></div>
-        </div>
-    
-        <div class="code-carousel-wrapper">
-            <div class="code-carousel">
-                </div>
-        </div>
+            </div>
+        
+            <div class="cust-slider-wrapper">
+                <div class="cust-slider">
+                    <div class="project-item" data-index="0">
+                        <div class="card-outline"></div>
+                        <img src="#" alt="Error Loading Image" class="card-image">
+                        <div class="card-content">
+                            <h3>No Title Found</h3>
+                            <p>Error Loading Images</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        
+            <div class="hero-divider btm_dark">
+                <img src="http://localhost/chris-webdev.github.io/uploads/images/dividers/btm-dark.png" alt="divider">
+            </div>
+        </section>
     </div>
-        <!-- Three.js Background ROBOT-->
-        <div id="threejs-container">
-            <style>
-                body, html {
-                    width: 100%;
-                    height: 100%;
-                }
-                #threeCanvas {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 1; /* Place the canvas in the background */
-                }
-                .foreground-content {
-                    position: relative;
-                    z-index: 2; /* Keep this content on top of the Three.js canvas */
-                    padding: 20px;
-                    color: white;
-                    font-family: Arial, sans-serif;
-                }
-                #threejs-container {
-                    position: absolute;
-                    top: 140px;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 1; /* Ensures the Three.js canvas is behind other elements */
-                }
-
-                #threeCanvas {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                
-            </style>
-          <script type="module" crossorigin src="https://chris-webdev.github.io/assets/3d-render/dist/assets/index-BHY4KheZ.js"></script>
-            <canvas id="threeCanvas"></canvas>
-        </div>
-    </section>
-
 </div>
 </body>
-<footer>
-<div id="footer-wrapper">
-
+<div id="footer-holder">
 </div>
-</footer>
 </html>
