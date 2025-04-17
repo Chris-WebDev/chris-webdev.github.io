@@ -8,8 +8,14 @@ This page does not include styles for:
     orb-css.css
 
 */
+script { display:none; }
 *{display: block; position: relative; margin: 0; padding: 0;}
 title{display: none;}
+html{    
+    max-width: 1897px;
+    min-width: 0px;
+    margin: auto;
+}
 body {
     font-family: 'Roboto';
     font-size: .5em;
@@ -17,8 +23,6 @@ body {
     color: white;
     background-color: #121212;
     overflow-x: hidden;
-    max-width: 1897px;
-    margin: auto;
 }
 
 a{text-decoration: none; color: #fd6262e6;}
@@ -156,11 +160,13 @@ Veiw the Three js index at:
 #threeCanvas {
     overflow: hidden;
     position: absolute;
+    scroll-behavior: none;
+    pointer-events: none;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Place the canvas in the background */
+    z-index: 0; /* Place the canvas in the background */
 }
 .foreground-content {
     position: relative;
@@ -189,6 +195,7 @@ Veiw the Three js index at:
 /* End of Three.js */
 
 .stripe {
+    margin-top: 100px;
     width: 100%;
     height: 100px;
 }

@@ -1,0 +1,63 @@
+#code-projects-column {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: end;
+    margin-right: 25px;
+}
+#main-pages-column, #web-projects-column {
+align-content: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+margin-top: -20px;
+} 
+#web-projects-column {margin: 0px;}
+#logo-container {
+    width: 30%;
+    margin-left: -20px;
+}
+#footer-logo-btm {
+    text-align: left; margin-left: 100px;
+}
+.footer-columns-container > div {padding: 0;}
+footer {
+    color: #fff;
+    padding: 150px 0px;
+    text-align: center;
+    font-size: 14px;
+    width: 101%;
+    background-color: #000000;
+    z-index: 10;
+    margin-left: -4px;
+    box-shadow: 0px 0px 8px 0px #ffffff80;
+}
+.footer-columns-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: left;
+    width: calc(100% - 200px);
+    margin: auto;
+}
+.footer-columns-container > div {
+    flex: 1;
+    padding: 0 20px;
+}
+.footer-columns-container h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #eee;
+}
+.footer-columns-container ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-columns-container ul li {
+    margin-bottom: 5px;
+}
+.footer-columns-container ul li a:hover {
+    text-decoration: underline;
+}

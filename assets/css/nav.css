@@ -44,8 +44,8 @@ nav ul {
     flex-wrap: wrap;
     align-content: center;
     height: 40px;
-    width: 55%;
-    align-items: end;
+    width: 100%;
+    justify-content: space-between;
 }
 nav li {
     width: 25%;
@@ -100,6 +100,9 @@ nav ul a::before {
 nav ul a:hover {
     color: black; /* Changes text color on hover */
 }
+div a:hover {
+    color: #fd6262e6; /* Changes text color on hover */
+}
 nav.dropbtn ul a:hover {
     color: #fd6262e6; /* Changes text color on hover */
 }
@@ -144,21 +147,12 @@ nav.scrolled ul{ width: 100%}
 nav > div{ width: 30%}
 nav h1{text-align: center;}
 
-/* You might want to adjust for smaller screens */
-@media (max-width: 900px) {
-    nav {
-        height: 100px;
-    }
-    #nav-logo {
-        display: none;
-    }
-}
-
 /* Basic styling for the dropdown menu */
 div.btn-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 .btnwhite{background-color: #ffffff;}/* controlls light button */
 .btnblack{background-color: #000000;}/* controlls dark button */
@@ -254,3 +248,5 @@ div.btn-row {
     display: block;
     object-fit: contain; /* Or cover, etc. */
 }
+
+#nav-holder > nav > button{display: none;}

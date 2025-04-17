@@ -1,0 +1,172 @@
+@media (min-width: 1367px) and (max-width: 1600px) { 
+    .project-item.active{scale: 1} 
+    .hp-hero h1:nth-child(1) {
+        font-size: 2rem;
+    }
+    div.hero-list > ul {
+        margin-left: 0px;
+    }
+    .hp-hero h1:nth-child(3){ margin: 0; font-size: 1.5rem;}
+    #wrapper {
+        padding: 100px 0px 100px 0px;
+    }
+    section.fl-w-bck{margin-bottom: 0px; scroll-behavior: none;}
+    .flex-col p{font-size: medium;}
+    #tech-stack-wrapper > div.about-wrapper > div:nth-child(1) > h3,#tech-stack-wrapper > div.about-wrapper > div:nth-child(1) > h1{font-size: medium;}
+    .gradient-over h1:nth-child(1) {
+        font-size: 1.5rem;
+    }
+    .gradient-over h1:nth-child(2){ font-size: 2rem; margin-top: 20px
+    }
+    #tech-stack-wrapper > div.cust-slider-wrapper{padding: 180px 0px;}
+
+    section {
+        width: calc(100% - 10px);
+        transform: translateX(3px);
+    }
+}
+@media (min-width: 750px) and (max-width: 1367px) { 
+    nav{
+        flex-wrap: wrap;
+        width: 75%;
+    }
+    nav.krona-one-regular {
+        font-size: 1.5rem;
+    }
+    #wrapper {
+        width: calc(100% - 130px);
+    }
+    /* nav.css Style switches */
+    .flex-col {width: 39%}
+    nav {flex-wrap: nowrap;}
+    nav .scrolled {
+        transform: translateX(-56%);
+        width: 75%;
+    }  
+    #right-cntrl {
+        left: 75px;
+        bottom: 71px;
+    }
+    /* main.css Style switches */
+    .hero-container {
+        min-height: 910px;
+    } 
+    section.fl-w-bck{
+        margin-left: -58px;
+    }
+    .hp-hero h1:nth-child(1){
+        margin-left: -170px;
+    }
+    .hp-hero h1:nth-child(3){
+        margin-left: -58px;
+    }
+    div.hero-list > ul {
+        margin-left: -58px;
+    }
+    /* Tech Stack Styling */
+    .gradient-over {
+        margin-top: 100px;
+    }
+    /* Active (Centered) Card Style */
+    .project-item.active {
+        transform: scale(1);
+    }
+    section.fl-w-bck {
+        width: 83vw;
+        min-height: -22vh;
+        margin-left: -100px;
+        padding-left: 170px;
+        /* margin-bottom: -100px; */
+    }
+}
+
+@media (max-width: 750px) { 
+    nav {
+        flex-wrap: wrap;
+        /* width: 75%; */
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 0px;
+    }
+    nav .flex-col p {
+        font-size: small;
+        text-align: center;
+    }
+    nav .flex-col {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .btn-row { display: none;}
+    nav.scrolled {
+        position: fixed;
+        top: 0px;
+        /* left: 50%; */
+        /* transform: translateX(-50%) scale(1); */
+        /* margin-left: 0px; */
+        /* width: calc(100% - 312px); */
+        opacity: 1;
+    }
+    .scrolled #nav-logo, #nav-holder > nav > div:nth-child(4) {
+        display: none;
+    }
+    nav.krona-one-regular {
+        font-size: 1.5rem;
+    }
+    #wrapper {
+        width: calc(100% - 130px);
+    }
+    /* nav.css Style switches */
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    nav {flex-wrap: nowrap;}
+    nav .scrolled {
+        transform: translateX(-56%);
+        width: 75%;
+    }  
+    #right-cntrl {
+        left: 75px;
+        bottom: 71px;
+    }
+    /* main.css Style switches */
+    .hero-container {
+        min-height: 910px;
+    } 
+    section.fl-w-bck{
+        margin-left: -58px;
+    }
+    .hp-hero h1:nth-child(1){
+        margin-left: -170px;
+    }
+    .hp-hero h1:nth-child(3){
+        margin-left: -58px;
+    }
+    div.hero-list > ul {
+        margin-left: -58px;
+    }
+    /* Tech Stack Styling */
+    .gradient-over {
+        margin-top: 100px;
+    }
+    /* Active (Centered) Card Style */
+    .project-item.active {
+        transform: scale(1);
+    }
+    section.fl-w-bck {
+        width: 83vw;
+        min-height: -22vh;
+        margin-left: -100px;
+        padding-left: 170px;
+        /* margin-bottom: -100px; */
+    }
+}
+

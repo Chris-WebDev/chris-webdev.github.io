@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let isScrolling = false;
     const scrollDebounceDelay = 50; // Adjust debounce as needed
     const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html');
-    const isWorkPage = window.location.pathname.includes('https://chris-webdev.github.io/web-projects.html'); // Adjust if your work page URL is different
+    const isWorkPage = window.location.pathname.includes('web-projects.html'); // Adjust if your work page URL is different
   
     function loadProjectData() {
-      fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
+      fetch('assets/js/web-proj.json')
         .then(response => response.json())
         .then(data => {
             
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="card-content">
             <h3 class="krona-one-regular">${project.title}</h3>
             <p id="card-description-${project.id}"></p>
-            <a id="read-more-link" href="https://chris-webdev.github.io/assets/pg-build-temp/project.html?id=${project.id}" class="read-more-link">
+            <a id="read-more-link" href="assets/pg-build-temp/project.html?id=${project.id}" class="read-more-link">
               Read More <span class="arrow-icon"></span>
             </a>
           </div>
