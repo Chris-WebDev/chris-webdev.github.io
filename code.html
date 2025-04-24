@@ -4,24 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CWT Presents | Jonior Developer</title>
-        <!-- Site: Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
-        <!-- CSS files: -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
-        <!-- <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/cust-slider.css"><!--Slider CSS-->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/color-code.css"><!--Slider CSS-->
-        <!-- JavaScript Files: -->
-        <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- script.js = Main JS -->
-        <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
-        <script src="https://chris-webdev.github.io/assets/js/slider.js"></script><!-- Slider Scripts -->
-        <script src="https://chris-webdev.github.io/assets/js/code-controlls.js"></script><!-- Nav Scripts -->
-    
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            fetch("asset-links.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.head.innerHTML += data;
+        
+                    // Use a callback or wait for resources to load
+                    console.log("Assets loaded into <head>.");
+                })
+                .catch(error => console.error("Error loading asset-links.html:", error));
+        </script>
+        <!-- JavaScript Files -->
+        <script src="assets/js/script.js"></script> <!-- Main JS -->
+        <script src="assets/js/nav.js"></script><!-- Nav Scripts -->
+        <script src="assets/js/slider.js"></script><!-- Slider Scripts -->
+        <script src="assets/js/code-controlls.js"></script><!-- Code Controls -->
     </head>
 <body>
     <div id="nav-holder">

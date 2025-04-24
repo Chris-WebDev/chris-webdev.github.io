@@ -4,118 +4,128 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CWT Presents | Jonior Developer</title>
-        <!-- Site: Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
-        <!-- CSS files: -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><!-- Main CSS -->
-        <!-- <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"> -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><!-- Navigation CSS -->
-        <link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/about-page.css"><!-- Cntrols images and elements CSS -->
-        <!-- JavaScript Files: -->
-        <script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- script.js = Main JS -->
-        <script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
-        <script src="https://chris-webdev.github.io/assets/js/hover-affect.js"></script><!-- Hover Slider Scripts -->
-    
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script>
+            fetch("asset-links.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.head.innerHTML += data;
+        
+                    // Use a callback or wait for resources to load
+                    console.log("Assets loaded into <head>.");
+                })
+                .catch(error => console.error("Error loading asset-links.html:", error));
+        </script>
+        <!-- JavaScript Files -->
     </head>
 <body>
     <div id="nav-holder">
-        <!-- 
-            Called w/ main.js
-            Built: assets/header/nav.html
-        -->
     </div>
     <div id="wrapper" class="about-page">
-        <!-- Home Page - Hero Section (hp-hero) full-width-background -->
-            <section class="fl-w-bck hp-hero ap-hero-background ">
-                <div class="hero-container"><!-- Holds content for hero section -->
-                    <h1 class="krona-one-regular">Dream BIGGER<h1>
-                    <h1 class="krona-one-regular">A Github that Doesnt</h1>
-                    <h1 class="krona-one-regular">Leave You Hanging</h1>
+        <section class="fl-w-bck hp-hero ap-hero-background ">
+            <div class="hero-container"><h1 class="krona-one-regular">Dream BIGGER<h1>
+                    <h1 class="krona-one-regular">A Github that doesn't</h1>
+                    <h1 class="krona-one-regular">leave you hanging</h1>
+            </div>
+        </section>
+
+        <section>
+            <div id="about-page-content">
+                <div class="info-row">
+                    <div class="large-rectangle">
+                         <img id="large-image-display" src="" alt="" style="display: none;">
+                        <div class="text-content">
+                            <h2 class="krona-one-regular">Begins with Design<span class="fig-icon"></span></h2>
+                            <p>First, the conceptual foundation took shape with the use of Figma as your design tool. With Figma,
+                            you honed in on establishing a cohesive foundation of typography and color schemes. This step was
+                            essential for ensuring visual harmony across the site, capturing your preferred aesthetic while
+                            maintaining usability. During this stage, you uncovered a radial gradient that resonated with your
+                            creative vision—an excellent choice that added subtle depth and texture to the design. This gradient
+                            became an important visual element, setting the tone for the site's style.<p>
+                        </div>
+                    </div>
+                    <div class="small-rectangles">
+                        <div class="small-image-container" data-image="uploads/images/icon/web/figma.svg">
+                            <img class="small-image" src="uploads/images/icon/web/figma.svg" alt="Design">
+                        </div>
+                        <div class="small-image-container" data-image="uploads/images/default/aboutGit/img2.png">
+                            <img class="small-image" src="uploads/images/default/aboutGit/img2.png" alt="Framework">
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-            <!-- Static Hover effect -->
-            <section>
-                <div id="about-page-content">
-                    <div class="info-row">
-                        <div class="large-rectangle">
-                            <div class="text-content">
-                                <h1>Begins with Design<span class="fig-icon"></span></h1>
-                                <p>First, the conceptual foundation took shape with the use of Figma as your design tool. With Figma, 
-                                you honed in on establishing a cohesive foundation of typography and color schemes. This step was 
-                                essential for ensuring visual harmony across the site, capturing your preferred aesthetic while 
-                                maintaining usability. During this stage, you uncovered a radial gradient that resonated with your 
-                                creative vision—an excellent choice that added subtle depth and texture to the design. This gradient 
-                                became an important visual element, setting the tone for the site's style.<p>
-                            </div>
-                        </div>
-                        <div class="small-rectangles">
-                            <div class="small-rectangle" data-color="#000"></div>
-                            <div class="small-rectangle" data-color="#000"></div>
+                <div class="info-row">
+                    <div class="large-rectangle">
+                        <img id="large-image-display" src="" alt="" style="display: none;">
+                        <div class="text-content">
+                            <h2 class="krona-one-regular">Creating Framework<span class="fig-icon"></span></h2>
+                            <p>Next, you began building the HTML framework, establishing structure and functionality. Starting with a
+                            basic navigation setup and simple styles, you focused on crafting a well-organized foundation for the site's
+                            layout. The navigation brought intuitive browsing into the mix, reflecting your emphasis on user experience.
+                            This stage marked the transition from a conceptual design to tangible functionality—bridging aesthetics with
+                            the nuts-and-bolts practicality of web development.</p>
                         </div>
                     </div>
-                    <div class="info-row">
-                        <div class="large-rectangle">
-                            <div class="text-content">
-                                <h1>Begins with Design<span class="fig-icon"></span></h1>
-                                <p>Next, you began building the HTML framework, establishing structure and functionality. Starting with a 
-                                basic navigation setup and simple styles, you focused on crafting a well-organized foundation for the site's 
-                                layout. The navigation brought intuitive browsing into the mix, reflecting your emphasis on user experience. 
-                                This stage marked the transition from a conceptual design to tangible functionality—bridging aesthetics with 
-                                the nuts-and-bolts practicality of web development.</p>
-                            </div>
+                    <div class="small-rectangles">
+                       <div class="small-image-container" data-image="uploads/images/icon/web/html.svg">
+                            <img class="small-image" src="uploads/images/icon/web/html.svg" alt="JSON">
                         </div>
-                        <div class="small-rectangles">
-                            <div class="small-rectangle" data-color="#000"></div>
-                            <div class="small-rectangle" data-color="#000"></div>
+                        <div class="small-image-container" data-image="uploads/images/default/aboutGit/img3.png">
+                            <img class="small-image" src="uploads/images/default/aboutGit/img3.png" alt="UI Updates">
                         </div>
                     </div>
-                    <div class="info-row">
-                        <div class="large-rectangle">
-                            <div class="text-content">
-                                <h1>Begins with Design<span class="fig-icon"></span></h1>
-                                <p>Then came the deeper dive into the frameworks, where you created links to your GitHub repositories and added 
-                                    dynamic interactivity. Using JSON data, you implemented a single-page application-style ‘WORK’ page to 
-                                    showcase your repositories effectively. This approach enabled dynamic content updates while maintaining a 
-                                    clean and streamlined browsing experience. By leveraging the power of JSON, you simplified how content is 
-                                    organized and presented, making it easy for users to explore your projects without navigating away from the page.</p>
-                            </div>
-                        </div>
-                        <div class="small-rectangles">
-                            <div class="small-rectangle" data-color="#000"></div>
-                            <div class="small-rectangle" data-color="#000"></div>
-                        </div>
-                    </div>
-                    <div class="info-row">
-                        <div class="large-rectangle">
-                            <div class="text-content">
-                                <h1>Begins with Design<span class="fig-icon"></span></h1>
-                                <p>Finally, you brought everything together in a minimalistic GitHub Pages website that balanced elegance with ease of 
-                                use. Designed to be visually appealing and straightforward, this site emphasizes effortless navigation and quick 
-                                content updates. The inclusion of a Three.js canvas hero lends a modern and dynamic touch to the site, though you’ve 
-                                noted its need for adjustments across various integrations. The site's overall structure and aesthetic not only 
-                                highlight your technical skills but also your ability to deliver an engaging user experience that’s adaptable and functional.<p>
-                            </div>
-                        </div>
-                        <div class="small-rectangles">
-                            <div class="small-rectangle" data-color="#000"></div>
-                            <div class="small-rectangle" data-color="#000"></div>
-                        </div>
-                    </div>
-                    <div id="static-image-hover-holder">
-                    </div>
-
                 </div>
+                <div class="info-row">
+                    <div class="large-rectangle">
+                         <img id="large-image-display" src="" alt="" style="display: none;">
+                        <div class="text-content">
+                            <h2 class="krona-one-regular">Created Json<span class="fig-icon"></span></h2>
+                            <p>Then came the deeper dive into the frameworks, where you created links to your GitHub repositories and added
+                            dynamic interactivity. Using JSON data, you implemented a single-page application-style ‘WORK’ page to
+                            showcase your repositories effectively. This approach enabled dynamic content updates while maintaining a
+                            clean and streamlined browsing experience. By leveraging the power of JSON, you simplified how content is
+                            organized and presented, making it easy for users to explore your projects without navigating away from the page.</p>
+                        </div>
+                    </div>
+                    <div class="small-rectangles">
+                        <div class="small-image-container" data-image="uploads/images/icon/web/json.svg">
+                            <img class="small-image" src="uploads/images/icon/web/json.svg" alt="Design">
+                        </div>
+                        <div class="small-image-container" data-image="uploads/images/default/aboutGit/img4.png">
+                            <img class="small-image" src="uploads/images/default/aboutGit/img4.png" alt="Framework">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="large-rectangle">
+                         <img id="large-image-display" src="" alt="" style="display: none;">
+                        <div class="text-content">
+                            <h2 class="krona-one-regular">UI Updates</h2>
+                            <p>Finally, you brought everything together in a minimalistic GitHub Pages website that balanced elegance with ease of
+                            use. Designed to be visually appealing and straightforward, this site emphasizes effortless navigation and quick
+                            content updates. The inclusion of a Three.js canvas hero lends a modern and dynamic touch to the site, though you’ve
+                            noted its need for adjustments across various integrations. The site's overall structure and aesthetic not only
+                            highlight your technical skills but also your ability to deliver an engaging user experience that’s adaptable and functional.<p>
+                        </div>
+                    </div>
+                    <div class="small-rectangles">
+                        <div class="small-image-container" data-image="uploads/images/icon/web/js.png">
+                            <img class="small-image" src="uploads/images/icon/web/js.png" alt="UI Updates">
+                        </div>
+                        <div class="small-image-container" data-image="uploads/images/default/aboutGit/img5.png">
+                            <img class="small-image" src="uploads/images/default/aboutGit/img5.png" alt="JSON">
+                        </div>
+                    </div>
+                </div>
+                <div id="static-image-hover-holder">
+                     <img id="static-image-content" src="" alt="" style="display: none;">
+                </div>
+            </div>
 
-            </section>    
-                
+        </section>
     </div>
-    </body>
-    <div id="footer-holder">
-    
-    </div>
+</body>
+<script src="https://chris-webdev.github.io/assets/js/script.js"></script> <!-- Main JS -->
+<script src="https://chris-webdev.github.io/assets/js/nav.js"></script><!-- Nav Scripts -->
+<script src="https://chris-webdev.github.io/assets/js/hover-affect.js"></script><!-- Code Controls -->
+<div id="footer-holder">
+</div>
 </html>

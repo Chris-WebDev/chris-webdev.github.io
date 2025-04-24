@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const heroSection = document.querySelector('.hp-hero');
+    const heroSection = document.querySelector('.p-hero');
     const aboutWrapper = document.querySelector('.about-wrapper');
     const aboutImageContainer = document.getElementById('about-image-container');
     const aboutTextContainer = document.createElement('div');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             const overlay = heroSection.querySelector('.hero-content-overlay');
             if (overlay) {
-                overlay.style.color = 'white';
+                overlay.style.color = 'black';
                 overlay.style.padding = '20px';
                 overlay.style.textAlign = 'center';
             }

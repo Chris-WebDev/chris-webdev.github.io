@@ -8,25 +8,24 @@ This page does not include styles for:
     orb-css.css
 
 */
-script { display:none; }
-*{display: block; position: relative; margin: 0; padding: 0;}
-title{display: none;}
+*{display: block; position: relative; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Krona One';}
+title,script,style,head{display: none;}
 html{    
     max-width: 1897px;
     min-width: 0px;
     margin: auto;
 }
 body {
-    font-family: 'Roboto';
-    font-size: .5em;
+    font-family: 'Krona One';
+    font-size: 12px;
     font-weight: 400;
     color: white;
     background-color: #121212;
     overflow-x: hidden;
 }
-
-a{text-decoration: none; color: #fd6262e6;}
-.flex-col p{font-size: large}
+footer{text-align: center;}
+a{text-decoration: none; color: #fff;}
+.flex-col p{font-size: 12px}
 /* Target the whole scrollbar */
 ::-webkit-scrollbar {
     background-color: transparent;
@@ -77,8 +76,7 @@ a{text-decoration: none; color: #fd6262e6;}
 }
 
 #wrapper{
-    width: calc(100% - 200px);
-    font-family: 'Roboto Thin';
+    font-family: 'Krona One';
     align-content: center;
     margin: 0px 100px;
     padding: 100px 0px;
@@ -108,11 +106,11 @@ div.hero-list > ul {
     margin-left: 218px; 
 }
 .hp-hero h1:nth-child(1){
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 .hp-hero h1:nth-child(3){
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-left: 227px;
     padding-top: 20px;
     padding-bottom: 50px;
@@ -137,7 +135,8 @@ section {
 /* Full Width Background - remove wrapper margin */
 section.fl-w-bck{
     width: 100vw;
-    min-height: 100vh;
+    min-height: 720px;
+    max-height: 990px;
     margin-left: -100px; /* clear wrapper margin */
     padding-left: 100px;/* Align padding */
     margin-bottom: -100px;/* Align padding */
@@ -145,7 +144,6 @@ section.fl-w-bck{
 .hp-hero {    
     height: auto;
     background-image: radial-gradient(circle at 45% 125% #720000be, #72000077, #121212c5 , #121212);
-    font-size: large;
 }
 .hero-container {
     display: flex;
@@ -157,17 +155,6 @@ Three JS Canvas Render
 Veiw the Three js index at:
     assets > 3d-render > hero-home > dist > index.html
 */
-#threeCanvas {
-    overflow: hidden;
-    position: absolute;
-    scroll-behavior: none;
-    pointer-events: none;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Place the canvas in the background */
-}
 .foreground-content {
     position: relative;
     z-index: 2; /* Keep this content on top of the Three.js canvas */
@@ -176,21 +163,24 @@ Veiw the Three js index at:
 }
 #threejs-container {
     position: absolute;
-    top: 30px;
+    top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 134%;
     height: 100%;
-    z-index: -1; /* Placed behind blue to remove scroll behavoir */
+    z-index: 0;
 }
 
 #threeCanvas {
     position: absolute;
-    top: 100px;
-    right: 0;
+    scroll-behavior: none;
+    pointer-events: none;
+    z-index: 0; /* Place the canvas in the background */
+    top: 0px;
+    right: 50px;
     max-height: 700px;
-    max-width: 85%;
-    transform: translateX(24%);
+    max-width: 90%;
+    transform: translateX(2%);
 }
 /* End of Three.js */
 
@@ -240,15 +230,14 @@ button {
 }
 
 
-/* Tech Stack Styling */
 .gradient-over {
     font-size: 3em;
     height: fit-content;
-    background-image: radial-gradient(at 48% 55%, transparent -54%, #121212 58%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/teck-stack.png');
-    background-size: 68%;
+    background-image: radial-gradient(at 38% 55%, transparent -54%, #121212 58%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/teck-stack.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 56%;
-    background-position-x: -30%;
+    background-position-y: 32%;
+    background-position-x: -27%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -256,17 +245,16 @@ button {
 .tech-stack-wrapper {margin-top: -100px;}
 .tech-stack{
     height: 100%;
-    width: 100%;
     align-content: end;
     justify-content: end;
     display: inherit;
     flex-direction: column;
     flex-wrap: wrap;
+    font-size: 12px;
 }
 
 .icon{
     width: 550px;
-    font-size: 1em;
     background-color: #000;
     border-radius: 50px;
     padding: 10px;
@@ -284,54 +272,51 @@ button {
 #tech-stack-wrapper h3 {padding: 5px 0px 20px 0px}
 /* Style for each <p> using nth-child */
 .gradient-over h1:nth-child(1) {
-        font-size: 5rem;
+        font-size: 1.5rem;
 }
 /* Style for each <p> using nth-child */
 .gradient-over h1:nth-child(2) {
         margin-left: 71px;
-        font-size: 3rem;
+        font-size: 2rem;
 }
 /* Style for each <p> using nth-child */
 .tech-stack p:nth-child(1) {
-    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/css.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/css.png');
     background-repeat: no-repeat;
     margin-left: 100px;
     margin-top: -150px;
-    background-size: 10%;
+    background-size: 6%;
     background-position: 7%;
 }
 
 /* Style for each <p> using nth-child */
 .tech-stack p:nth-child(2) {
-    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/css.svg');
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/html.png');
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 6%;
     background-position: 7%;
 }
 
 .tech-stack p:nth-child(3) {
-    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/node-js.svg');
-    background-size: 10%;
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/js.png');
+    background-size: 6%;
     margin-left: 100px;
     background-position: 7%;
     background-repeat: no-repeat;
 }
 
 .tech-stack p:nth-child(4) {
-    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/js.png');
-    background-size: 10%;
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/json.png');
+    background-size: 6%;
     background-position: 6%;
     background-repeat: no-repeat;
 }
 .tech-stack p:nth-child(5) {
-    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/json.svg');
-    background-size: 15%;
-    background-position: 4%;
+    background-image: url('https://chris-webdev.github.io/uploads/images/icon/web/json.png');
+    background-size: 6%;
+    background-position: 6%;
     background-repeat: no-repeat;
 }
-
-style {display: none;}
-
 /* End of Tech Stack  */
 
 /* Work Page */
@@ -345,9 +330,9 @@ style {display: none;}
 
 .wp-hero-background {
     background-image: radial-gradient(114% 94%, transparent -16%, #121212 39%), url('https://chris-webdev.github.io/uploads/images/default/aboutGit/about-pae.png');
-    background-size: 70%;
+    background-size: 94%;
     background-position: 97% 0px;
-    background-repeat: no-repeat;
+    background-repeat: ;
     background-position-y: -84px;
 }
 
@@ -396,7 +381,20 @@ style {display: none;}
   .button:hover:after {
     opacity: 1;
   }
-  
+  #tech-stack-wrapper .cust-slider-wrapper h3 {
+    font-size: smaller;
+  }
+  #tech-stack-wrapper .cust-slider-wrapper p, #tech-stack-wrapper .cust-slider-wrapper a  {
+    font-size: xx-small;
+  }
+  #tech-stack-wrapper .cust-slider-wrapper a  {
+    font-size: xx-small;
+    color: #720000
+  }
+  footer a  {
+    font-size: xx-small;
+    color: #720000
+  }
 /*
   .btn-container::before {
     content: '';

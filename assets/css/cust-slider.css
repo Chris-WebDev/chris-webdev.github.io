@@ -77,10 +77,11 @@
 .project-item.active {
   opacity: 1;
   border-color: transparent;
-  transform: scale(2);
+  transform: scale(2.14);
   z-index: 1;
-  box-shadow: #000000af 0px 14px 31px -21px;
   padding: 20px 0px;
+  font-size: 8px;
+  background-color: #000;
 }
 
 .active .card-content {
@@ -91,3 +92,34 @@
 .card-image > img:nth-child(2){ transform: translateX(-40px);}
 #tech-stack-wrapper > div.cust-slider-wrapper > div > div.project-item.active > div.card-content > h3{ margin: 5px 0px;}
 #read-more-link{ margin-top: 2px;}
+
+/*
+.project-item.active::before {
+  content: '';
+  position: absolute;
+  top: -3px; /* Adjust to cover the overflow /
+  right: -3px; /* Adjust to cover the overflow /
+  bottom: -3px; /* Adjust to cover the overflow /
+  left: -3px; /* Adjust to cover the overflow /
+  background-image: repeating-conic-gradient(from 0deg,
+    #720000 0deg,
+    #720000 5%,
+    #fd6262e6 6%,
+    transparent 7%,
+    transparent 40%,
+    #720000 50%);
+  animation: rotateConicBackground 5s linear infinite;
+  transform-origin: center center;
+  z-index: -1; /* Place it behind the inner card content *
+  border-radius: inherit; /* Match the border-radius of the inner card *
+}
+
+@keyframes rotateConicBackground {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.project-item.active {
+  z-index: 1; /* Ensure active card content is above the pseudo-element /
+}
+*/

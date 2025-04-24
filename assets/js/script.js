@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Call nav
-  fetch('assets/header/nav.html')
+  fetch('https://chris-webdev.github.io/assets/header/nav.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-holder').innerHTML = data;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error loading nav:', error));
 
   // Call footer and populate it
-  fetch('assets/footer/footer.html')
+  fetch('https://chris-webdev.github.io/assets/footer/footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer-holder').innerHTML = data;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Populate Dropdown Menu */
 function loadProjectsForNav() {
-  fetch('assets/js/web-proj.json')
+  fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
     .then(response => response.json())
     .then(data => {
       const projects = data.projects;
@@ -42,7 +42,7 @@ function populateDropdown(projects) {
   projects.forEach(project => {
     const listItem = document.createElement('div');
     const link = document.createElement('a');
-    link.href = `assets/pg-build-temp/project.html?id=${project.id}`;
+    link.href = `https://chris-webdev.github.io/assets/pg-build-temp/project.html?id=${project.id}`;
     link.textContent = project.title;
 
     const imageContainer = document.createElement('div');
@@ -78,7 +78,7 @@ function populateDropdown(projects) {
 
 /* Load Navigation Hover Image */
 function loadNavHoverImage() {
-  fetch('assets/js/web-proj.json')
+  fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
     .then(response => response.json())
     .then(data => {
       if (data && data.projects && data.projects.length > 0 && data.projects[0].imageUrl) {
@@ -100,14 +100,14 @@ function populateFooterLinks() {
   const codeProjectsLinksContainer = document.getElementById('code-projects-links');
 
   // Fetch and populate Web Projects
-  fetch('assets/js/web-proj.json')
+  fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
     .then(response => response.json())
     .then(data => {
       const projects = data.projects;
       projects.forEach(project => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
-        link.href = `assets/pg-build-temp/project.html?id=${project.id}`;
+        link.href = `https://chris-webdev.github.io/assets/pg-build-temp/project.html?id=${project.id}`;
         link.textContent = project.title;
         listItem.appendChild(link);
         webProjectsLinksContainer.appendChild(listItem);
@@ -116,7 +116,7 @@ function populateFooterLinks() {
     .catch(error => console.error('Error loading web projects for footer:', error));
 
   // Fetch and populate Code Projects
-  fetch('assets/js/code-crsl-data.json')
+  fetch('https://chris-webdev.github.io/assets/js/code-crsl-data.json')
     .then(response => response.json())
     .then(data => {
       const codeProjects = data.codeProjects;
@@ -158,14 +158,14 @@ function populateWorkPage() {
   const codeProjectsLinksContainer = document.getElementById('work-code-projects-links');
 
   // Fetch and populate Web Projects
-  fetch('assets/js/web-proj.json')
+  fetch('https://chris-webdev.github.io/assets/js/web-proj.json')
     .then(response => response.json())
     .then(data => {
       const projects = data.projects;
       projects.forEach(project => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
-        link.href =  `assets/pg-build-temp/project.html?id=${project.id}`;
+        link.href =  `https://chris-webdev.github.io/assets/pg-build-temp/project.html?id=${project.id}`;
         link.textContent = project.title;
         listItem.appendChild(link);
         webProjectsLinksContainer.appendChild(listItem);
@@ -174,7 +174,7 @@ function populateWorkPage() {
     .catch(error => console.error('Error loading web projects for work:', error));
 
   // Fetch and populate Code Projects
-  fetch('assets/js/code-crsl-data.json')
+  fetch('https://chris-webdev.github.io/assets/js/code-crsl-data.json')
     .then(response => response.json())
     .then(data => {
       const codeProjects = data.projects;

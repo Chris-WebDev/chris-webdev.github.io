@@ -1,59 +1,79 @@
 const holder = document.getElementById('static-image-hover-holder');
-const lastCard = document.querySelector('.info-row:last-child');
-const smallRectangles = document.querySelectorAll('.small-rectangle');
+const staticImage = document.getElementById('static-image-content');
+const aboutContent = document.getElementById('about-page-content');
+const smallImageContainers = document.querySelectorAll('.small-image-container');
 
-function updateStickyPosition() {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const scrollY = window.scrollY;
+
+if (holder && aboutContent) {
     const holderHeight = holder.offsetHeight;
-    const lastCardBottom = lastCard.offsetTop + lastCard.offsetHeight;
+    const aboutContentTop = aboutContent.offsetTop;
+    const aboutContentHeight = aboutContent.offsetHeight;
+    const topOffset = 20;
+    const rightOffset = 20;
 
-    // Calculate the point where the holder should start floating to the bottom
-    const floatBottomThreshold = sectionTop + sectionHeight - holderHeight;
+    function updateStickyPosition() {
+        const scrollY = window.scrollY;
+        const contentTop = aboutContentTop;
+        const contentBottom = aboutContentTop + aboutContentHeight;
 
-    if (scrollY <= sectionTop) {
-        // When the section is above the viewport, position it absolutely at the top
-        holder.className = '';
-        holder.style.position = 'absolute';
-        holder.style.top = '20px';
-        holder.style.bottom = 'auto';
-    } else if (scrollY > sectionTop && scrollY < floatBottomThreshold) {
-        // When the section is in the viewport, make it sticky
-        holder.className = 'sticky';
-        holder.style.position = 'fixed';
-        holder.style.top = '20px';
-        holder.style.bottom = 'auto';
-    } else if (scrollY >= floatBottomThreshold && scrollY < lastCardBottom - holderHeight) {
-        // When the user scrolls past the floatBottomThreshold, but before the last card's bottom
-        holder.className = 'float-bottom';
-        holder.style.position = 'absolute';
-        holder.style.bottom = '20px';
-        holder.style.top = 'auto';
+        if (window.innerWidth < 768) { //check for mobile
+            holder.style.position = 'static';
+            holder.style.top = 'auto';
+            holder.style.right = 'auto';
+            holder.style.bottom = 'auto';
+        }
+        else if (scrollY < contentTop - topOffset) {
+            // Above the about content
+            holder.style.position = 'absolute';
+            holder.style.top = `${topOffset}px`;
+            holder.style.right = `${rightOffset}px`;
+            holder.style.bottom = 'auto';
+        } else if (scrollY > contentBottom - holderHeight - topOffset) {
+            // At or below the point where the bottom of the holder should align with the bottom of the content
+            holder.style.position = 'absolute';
+            holder.style.top = `auto`;
+            holder.style.right = `${rightOffset}px`;
+            holder.style.bottom = `${topOffset}px`;
+        } else {
+            // Within the about content's scroll range - smooth following
+            holder.style.position = 'absolute';
+            let holderTop = scrollY - contentTop + topOffset;
+
+            // Ensure the holder stays within the vertical bounds of the content
+            holderTop = Math.max(topOffset, Math.min(holderTop, contentBottom - holderHeight - topOffset));
+
+            holder.style.top = `${holderTop}px`;
+            holder.style.right = `${rightOffset}px`;
+            holder.style.bottom = 'auto';
+        }
     }
-    else {
-        holder.className = 'sticky-bottom';
-        holder.style.position = 'absolute';
-        holder.style.top = lastCardBottom - holderHeight - 20;
-        holder.style.bottom = 'auto';
+
+    function handleMouseOver(event) {
+       if (window.innerWidth >= 768) { //check for mobile
+            const imageSrc = event.target.parentElement.getAttribute('data-image');
+            if (imageSrc && holder) {
+                staticImage.src = imageSrc;
+                staticImage.style.display = 'block';
+                holder.style.backgroundColor = 'transparent';
+            }
+        }
+
+
     }
+
+    function handleMouseOut() {
+        if (holder) {
+            staticImage.style.display = 'none';
+            holder.style.backgroundColor = '#ccc';
+        }
+
+    }
+
+    smallImageContainers.forEach(container => {
+        container.addEventListener('mouseover', handleMouseOver);
+        container.addEventListener('mouseout', handleMouseOut);
+    });
+
+    window.addEventListener('scroll', updateStickyPosition);
+    updateStickyPosition();
 }
-
-function handleMouseOver(event) {
-    const color = event.target.getAttribute('data-color');
-    holder.style.backgroundColor = color;
-}
-
-function handleMouseOut() {
-    holder.style.backgroundColor = '#ccc'; // Or any default color
-}
-
-smallRectangles.forEach(rect => {
-    rect.addEventListener('mouseover', handleMouseOver);
-    rect.addEventListener('mouseout', handleMouseOut);
-});
-
-
-window.addEventListener('scroll', updateStickyPosition);
-updateStickyPosition();
-

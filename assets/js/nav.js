@@ -2,108 +2,187 @@ window.addEventListener("scroll", function () {
     const nav = document.querySelector("nav");
     const navUl = nav.querySelector("ul");
     const navFlexCol = nav.querySelector(".flex-col");
+    const navScroll = nav.querySelector(".scrolled");
     const scrollY = window.scrollY;
-    const windowWidth = window.innerWidth; // Get window width
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
     const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
     const scrollFromBottom = documentHeight - windowHeight - scrollY;
-
-    const switchThreshold = 150;     // Threshold for the instant switch
-    const scaleStart = 50.3;         // ScrollY to start scaling the nav
-    const scaleEnd = 10;           // ScrollY to be fully scaled (either 0 or 1)
-    const bottomShrinkStart = 200; // Distance from bottom to start shrinking/fading
-    const bottomShrinkEnd = 50;     // Distance from bottom to be fully gone/shrunk
-
-    let scrolledTranslateX = "-50%"; // Default translateX for scrolled state
-
-    // Update translateX based on window width
-    if (windowWidth <= 1367 && windowWidth > 700) {
-        scrolledTranslateX = "-31%";
+  
+    // --- Thresholds ---
+    const switchThreshold = 150;
+    const scaleStart = 50.3;
+    const scaleEnd = 10;
+    const bottomShrinkStart = 200;
+    const bottomShrinkEnd = 50;
+  
+    let scrolledTranslateX = "0%";
+    let translateXValue = 0;
+    const translateXIncrease = 0.7;
+    const scrollDecreaseStep = 100;
+    const minScrollY = 1900;
+    const maxScrollY = 2560;
+  
+    // --- Helper Functions ---
+    function applyInitialNavStyles() {
+      nav.classList.remove("scrolled", "shrinking");
+      nav.style.position = "relative";
+      nav.style.top = "auto";
+      nav.style.left = "-98px";
+      nav.style.transform = `translateX(0pc) scale(1)`;
+      nav.style.marginLeft = `calc(-40vw + 20px)`;
+      nav.style.opacity = 1;
+      navUl.style.opacity = 1;
+      navFlexCol.style.opacity = 1;
+      nav.style.width = "calc(80vw - 5px);";
+      if (windowWidth > 1364) {
+        nav.style.width = "";
+        nav.style.left = "";
+        nav.style.marginLeft = "";
+      } else if (windowWidth < 1364) {
+        nav.style.left = "";
+        nav.style.marginLeft = "";
+        navScroll.style.transform = `translateX(-5.5pc) scale(1)`;
+      }
+      else {
+        nav.style.width = "calc(80vw - 5px);";
+      }
     }
-
+  
+    function applyScrolledNavStyles() {
+      nav.classList.add("scrolled");
+      nav.classList.remove("shrinking");
+      nav.style.position = "fixed";
+      nav.style.top = "50px";
+      nav.style.left = "50%";
+      nav.style.marginLeft = `calc(-40vw + 20px)`;
+      nav.style.opacity = 1;
+      navUl.style.opacity = 1;
+      navFlexCol.style.opacity = 1;
+      nav.style.padding = "0px 100px";
+      nav.style.width = `100%`;
+      if (windowWidth > 2201 ) {
+        nav.style.width = "58.5%";
+      }else if (windowHeight < 2200 && windowWidth >= 2101 ) {
+        nav.style.width = "76%";
+      }else if (windowWidth < 2100 && windowWidth >= 2000 ) {
+        nav.style.width = "83.5%";
+      }else if (windowWidth < 1999 && windowWidth >= 1741) {
+        nav.style.width = "88.5%";
+      }else if (windowWidth < 1740 && windowWidth >= 1681){
+        nav.style.width = "87.8%";
+      }else if (windowWidth < 1680 && windowWidth >= 1365){
+        nav.style.width = "85%";
+      }else if (windowWidth > 1364 && windowWidth <= 1490) {
+        nav.style.top = "30px";
+        nav.style.marginLeft = "calc(40px - 40vw)";
+        nav.style.width = `calc(100% - 200px)`;
+      }
+      else if (windowWidth > 1260 && windowWidth <= 1363){
+        nav.style.width = "100%";
+        nav.style.transform = "translateX(-10%) scale(1)";
+      }else if (windowWidth > 600 && windowWidth <= 1263){
+        nav.style.width = "100%";
+      }
+      else{
+        nav.style.padding = "0px 20px";
+        nav.style.width = "100%";
+      }
+    }
+  
+    function applyShrinkingNavStyles(opacity, scale) {
+      nav.classList.add("shrinking");
+      nav.style.transform = `translateX(-50%) scale(${scale})`;
+      nav.style.opacity = opacity;
+      nav.style.width = `calc(80vw - 5px)`;
+      nav.style.marginLeft = `0`;
+    }
+  
+    function getTranslateXByWidth(width) {
+      const breakpoints = [
+        { minWidth: 2500, translateX: "-0.75%" },
+        { minWidth: 2400, translateX: "-1.8%" },
+        { minWidth: 2100, translateX: "-4.3%" },
+        { minWidth: 2000, translateX: "-5.6%" },
+        { minWidth: 1800, translateX: "-5.3%" },
+        { minWidth: 1800, translateX: "-6.1%" },
+        { minWidth: 1700, translateX: "-5.5%" },
+        { minWidth: 1600, translateX: "-5.8%" },
+        { minWidth: 1500, translateX: "-6.5%" },
+        { minWidth: 1300, translateX: "-5%" },
+        { minWidth: 1200, translateX: "-1%" },
+        { minWidth: 1179, translateX: "-10.5%" },
+        { minWidth: 900, translateX: "-15.5%" },
+        { minWidth: 800, translateX: "-16.5%" },
+        { minWidth: 700, translateX: "-17.5%" },
+        { minWidth: 600, translateX: "-18%" },
+      ];
+  
+      for (const breakpoint of breakpoints) {
+        if (width >= breakpoint.minWidth) {
+          return breakpoint.translateX;
+        }
+      }  
+      return "-10.5%"; // Default fallback
+    }
+  
+    // --- 1. Handle Initial State ---
     if (scrollY < switchThreshold) {
-        // Initial full-width nav - ENSURE ALL SCROLLED STYLES ARE RESET
-        nav.classList.remove("scrolled");
-        nav.classList.remove("shrinking");
-        nav.style.position = "relative";
-        nav.style.top = "auto";
-        nav.style.left = "auto";
-        nav.style.transform = `translateX(0) scale(1)`;
+      applyInitialNavStyles();
+  
+      if (scrollY > scaleStart) {
+        const scaleFactor = Math.max(0, 1 - (scrollY - scaleStart) / (switchThreshold - scaleStart));
+        nav.style.transform = `translateX(0%) scale(1})`;
+        nav.style.opacity = scaleFactor;
+        nav.style.marginLeft = "50%";
+      } else if (scrollY <= scaleEnd) {
+      } else {
         nav.style.marginLeft = "0";
         nav.style.opacity = 1;
-        navUl.style.opacity = 1;
-        navFlexCol.style.opacity = 1;
-
-        // Control scaling of nav at the top
-        if (scrollY > scaleStart) {
-            const scaleFactor = Math.max(0, 1 - (scrollY - scaleStart) / (switchThreshold - scaleStart));
-            nav.style.transform = `translateX(-54%) scale(${scaleFactor})`;
-            nav.style.opacity = scaleFactor; // Optionally fade out with scale
-            nav.style.width = `calc(100% - 200px)`; // Shrink width as it scales
-            nav.style.marginLeft = "50%"; // Maintain center as it shrinks
-        } else {
-            nav.style.marginLeft = "0";
-            nav.style.opacity = 1;
-            if (windowWidth === 1367) {
-                scrolledTranslateX = "-56%";
-                scrolledWidth = `1450px`;
-            }
-            if (windowWidth < 750) {
-                nav.style.width = 'auto';
-                nav.style.transform = `translateX(0px) scale(${scale})`;
-                nav.style.opacity = opacity;
-                nav.style.width = `auto`; // Maintain original scrolled width
-                nav.style.marginLeft = `0`; // Ensure centering via transform
-            }
-            if (scrollY <= scaleEnd) {
-                // Optionally set initial scale if you want it to start smaller
-                // nav.style.transform = `translateX(-50%) scale(0)`;
-                // nav.style.opacity = 0;
-            }
-        }
-    } else if (scrollY >= switchThreshold) {
-        // Instant switch to scrolled nav
-        nav.classList.add("scrolled");
-        nav.classList.remove("shrinking");
-        nav.style.position = "fixed";
-        nav.style.top = "50px";
-        nav.style.left = "50%";
-        nav.style.transform = `translateX(${scrolledTranslateX}) scale(1)`; // Use dynamic translateX
-        nav.style.marginLeft = "0";
-        nav.style.width = `calc(100% - 312px)`;
-        nav.style.opacity = 1;
-        navUl.style.opacity = 1;
-        navFlexCol.style.opacity = 1;
-
-        // Bottom shrinking logic remains the same
-        if (scrollFromBottom <= bottomShrinkStart && scrollFromBottom > bottomShrinkEnd) {
-            nav.classList.add("shrinking");
-            const shrinkFactorBottom = (bottomShrinkStart - scrollFromBottom) / (bottomShrinkStart - bottomShrinkEnd);
-            const opacity = 1 - shrinkFactorBottom;
-            const scale = 1 - (shrinkFactorBottom * 0.5); // Scale down towards center
-
-            nav.style.transform = `translateX(-50%) scale(${scale})`;
-            nav.style.opacity = opacity;
-            nav.style.width = `calc(100% - 300px)`; // Maintain original scrolled width
-            nav.style.marginLeft = `0`; // Ensure centering via transform
-        } else if (scrollFromBottom <= bottomShrinkEnd) {
-            nav.classList.add("shrinking");
-            nav.style.transform = `translateX(-50%) scale(0)`; // Fully scale down
-            nav.style.opacity = 0;
-        } else {
-            nav.classList.remove("shrinking");
-            nav.style.transform = `translateX(-50%) scale(1)`; // Reset scale
-            nav.style.opacity = 1;
-        }
-
+      }
     }
-    document.querySelector('.hamburger-menu').addEventListener('click', function() {
-        document.querySelector('.dropdown-content').classList.toggle('active');
-    });
-});
-
-const navLinks = document.querySelector('.nav-content');
-
-function toggleMenu() {
+    // --- 2. Handle Scrolled State ---
+    else if (scrollY >= switchThreshold) {
+      applyScrolledNavStyles();
+  
+      const translateX = getTranslateXByWidth(windowWidth);  // Use the function
+      nav.style.transform = `translateX(${translateX}) scale(1)`;
+  
+      // --- 3. Custom translateX adjustment ---
+      if (scrollY >= minScrollY && scrollY <= maxScrollY) {
+        for (let i = maxScrollY; i >= minScrollY; i -= scrollDecreaseStep) {
+          if (scrollY <= i) {
+            translateXValue = 0 + ((maxScrollY - i) / scrollDecreaseStep) * translateXIncrease;
+            scrolledTranslateX = `-${translateXValue}%`;
+            break;
+          }
+        }
+        nav.style.transform = `translateX(${scrolledTranslateX}) scale(1)`;
+      }
+  
+      if (scrollFromBottom <= bottomShrinkStart && scrollFromBottom > bottomShrinkEnd) {
+        const shrinkFactorBottom = (bottomShrinkStart - scrollFromBottom) / (bottomShrinkStart - bottomShrinkEnd);
+        const opacity = 1 - shrinkFactorBottom;
+        const scale = 1 - (shrinkFactorBottom * 0.5);
+        applyShrinkingNavStyles(opacity, scale);
+      } else if (scrollFromBottom <= bottomShrinkEnd) {
+        applyShrinkingNavStyles(0, 0);
+      } else {
+        nav.classList.remove("shrinking");
+        nav.style.transform = `translateX(${getTranslateXByWidth(windowWidth)}) scale(1)`; // Use the function here too.
+        nav.style.opacity = 1;
+      }
+    }
+  
+    /* --- 4. Hamburger Menu ---
+    document.querySelector('.hamburger-menu').addEventListener('click', function () {
+      document.querySelector('.dropdown-content').classList.toggle('active');
+    });*/
+  });
+  
+  // --- 5. Mobile Menu Function ---
+  const navLinks = document.querySelector('.nav-content');
+  function toggleMenu() {
     navLinks.classList.toggle('open');
-}
+  }
+  

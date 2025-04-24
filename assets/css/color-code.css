@@ -72,10 +72,10 @@
   .code-carousel-wrapper {
     margin-top: 100px;
     position: relative;
-    width: calc(100%);
+    font-size: 6px;
     height: 100vh;
     margin: 0 auto;
-    perspective: 1100px;
+    perspective: 400px;
     overflow-x: hidden;
     overflow-y: hidden;
     display: flex;
@@ -87,7 +87,8 @@
   .code-carousel {
     position: relative;
     width: 100%;
-    height: 90vh;
+    max-height: 990px;
+    min-height: 720px;
     /* Height of the container, adjust as needed */
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
@@ -136,7 +137,7 @@
   }
   
   .code-card.active-expanded {
-    background-color: #720000 !important; /* Red background for the active card */
+    background-color: black !important; /* Red background for the active card */
   }
   
   .code-card.active-expanded::before {
@@ -145,7 +146,6 @@
   }
   
   .code-card.expanding-up {
-    transform: translateZ(100px) scale(1.2);
     overflow-y: visible;
     height: 400px;
   }

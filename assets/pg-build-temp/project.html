@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CWT Presents | Eay to Use Page-Builder</title>
-    <link rel="shortcut icon" href="favicon.ico" type="uploads/image/x-icon">
-    <link rel="stylesheet" href="https://chris-webdev.github.io/main.css"><link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/orb-css.css"><link rel="stylesheet" href="https://chris-webdev.github.io/assets/css/nav.css"><script src="https://chris-webdev.github.io/assets/js/nav.js"></script><script src="https://chris-webdev.github.io/assets/js/script.js"></script> <script src="https://chris-webdev.github.io/assets/pg-build-temp/assets/js/project.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>CWT Presents | Jonior Developer</title>
+    <script>
+        fetch("http://localhost/git2025/asset-links.html")
+            .then(response => response.text())
+            .then(data => {
+                document.head.innerHTML += data;
+    
+                // Use a callback or wait for resources to load
+                console.log("Assets loaded into <head>.");
+            })
+            .catch(error => console.error("Error loading asset-links.html:", error));
+    </script>
+    <!-- JavaScript Files -->
+    <script src="http://localhost/git2025/assets/js/script.js"></script> <!-- Main JS -->
+    <script src="http://localhost/git2025/assets/js/nav.js"></script><!-- Nav Scripts -->
+    <script src="http://localhost/git2025/assets/js/slider.js"></script><!-- Slider Scripts -->
+    <script src="http://localhost/git2025/assets/js/code-controlls.js"></script><!-- Code Controls -->
+    <script src="http://localhost/git2025/assets/pg-build-temp/assets/js/project.js"></script><!-- Code Controls -->
+    <script src="http://localhost/git2025/assets/pg-build-temp/assets/css/styles.css"></script><!-- Code Controls -->
     <style>
         .image-grid-lightbox {
             display: grid;
@@ -48,16 +60,30 @@
         .lightbox.active {
             display: flex;
         }
+        section.p-hero {
+            max-width: 74vw;
+        }
+        #about-image-container > img {
+            max-width: 50%;
+        }
+        #about-text-container > p:nth-child(1) {
+            width: 900px;
+            float: right;
+            top: -50rem;
+        }
+        @media (max-width: 1901px) {
+    #wrapper > section.p-hero {
+        min-height: 100vh;
+        width: 100%;
+    }}
     </style>
 </head>
 <body>
 <div id="nav-holder">
 </div>
 <div id="wrapper">
-    <section class="hp-hero" style="min-height: 100vh;">
+    <section class="p-hero" style="min-height: 100vh;">
         <div class="hero-content-holder">
-            <div id="project-details">
-            </div>
         </div>
         <div class="container">
             <div class="orb" id="left"></div>
@@ -68,14 +94,16 @@
     </section>
     <section class="radial12" style="height: auto; margin-top: -20px;">
         <div class="about-wrapper">
-            <div id="about-image-container">
+            <div id="project-details">
             </div>
-            <div id="about-text-container">
+            <div id="about-image-container">
             </div>
             <div class="image-grid-lightbox" id="image-grid-container">
             </div>
             <div class="lightbox" id="lightbox">
                 <img src="" alt="Lightbox Image">
+            </div>
+            <div id="about-text-container">
             </div>
         </div>
     </section>
@@ -102,9 +130,7 @@
     </script>
 </div>
 </body>
-<footer>
-<div id="footer-wrapper">
+<div id="footer-holder">
 
 </div>
-</footer>
 </html>
