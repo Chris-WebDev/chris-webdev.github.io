@@ -3,7 +3,7 @@
     <img src="https://chris-webdev.github.io/uploads/images/icon/main-logo.png" alt="CWT | Developer" id="nav-logo">
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="flex-col">
-        <h6 class="krona-one-regular">Choose Bewtween Light or Dark Styles</h6>
+        <h6 class="krona-one-regular">Choose Bewtween WordPress or GitHub Pages</h6>
         <div class="btn-row">
         <!--
             <div class="btn-container">
@@ -93,7 +93,18 @@
                 </div>
                 </div>
             </label>
-  
+			<script>
+            document.getElementById("input").addEventListener("change", function () {
+                if (!this.checked) {
+                    document.body.classList.add("dark-theme");
+                } else {
+                    setTimeout(() => {
+                        window.open("https://chris-webdev.github.io/", "_blank");
+                        this.checked = true; // Recheck the toggle after redirect
+                    }, 500); // Adjust delay (1000ms = 1 second)
+                }
+            });
+			</script>
 
             </div>
         </div>
