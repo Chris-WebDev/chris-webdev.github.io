@@ -45,7 +45,7 @@ window.addEventListener("scroll", function () {
         navScroll.style.transform = `translateX(-5.5pc) scale(1)`;
       }
       else {
-        nav.style.width = "calc(80vw - 5px);";
+        nav.style.width = "calc(100% - 40px);";
       }
     }
   
