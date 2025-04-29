@@ -74,6 +74,10 @@ nav .flex-col p {
     font-size: small;
     text-align: right;
 }
+#nav-holder > nav > div:nth-child(4){
+    margin-left: calc(30% - 239px);
+    text-align: center;
+}
 /*
 nav ul a {
     text-decoration: none;
