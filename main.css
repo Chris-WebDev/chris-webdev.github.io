@@ -11,8 +11,6 @@ This page does not include styles for:
 *{display: block; position: relative; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Krona One';}
 title,script,style,head{display: none;}
 html{    
-    max-width: 1897px;
-    min-width: 0px;
     margin: auto;
 }
 body {
