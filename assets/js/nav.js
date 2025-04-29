@@ -62,7 +62,7 @@ window.addEventListener("scroll", function () {
       nav.style.padding = "0px 100px";
       nav.style.width = `100%`;
       if (windowWidth > 2201 ) {
-        nav.style.width = "58.5%";
+        nav.style.width = "calc(100% - 40px)%";
       }else if (windowHeight < 2200 && windowWidth >= 2101 ) {
         nav.style.width = "76%";
       }else if (windowWidth < 2100 && windowWidth >= 2000 ) {
@@ -100,7 +100,7 @@ window.addEventListener("scroll", function () {
   
     function getTranslateXByWidth(width) {
       const breakpoints = [
-        { minWidth: 2500, translateX: "-0.75%" },
+        { minWidth: 2500, translateX: "-10.5%" },
         { minWidth: 2400, translateX: "-1.8%" },
         { minWidth: 2100, translateX: "-4.3%" },
         { minWidth: 2000, translateX: "-5.6%" },
