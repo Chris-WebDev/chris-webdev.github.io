@@ -20,6 +20,8 @@
 @media (min-width: 1100px) {
     #threeCanvas {
         top: 0px;
+        righT: -90px;
+        scale: .5;
 
     }
 }
