@@ -35,15 +35,14 @@ nav.scrolled {
 }
 nav ul {
     list-style: none;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Krona One';
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    height: 40px;
-    width: 100%;
     justify-content: space-between;
+    padding-left: 20px;
 }
 nav li {
     width: 25%;
