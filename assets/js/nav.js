@@ -34,7 +34,7 @@ window.addEventListener("scroll", function () {
       nav.style.opacity = 1;
       navUl.style.opacity = 1;
       navFlexCol.style.opacity = 1;
-      nav.style.width = "calc(80vw - 5px);";
+      nav.style.width = "calc(100% - 40px)";
       if (windowWidth > 1364) {
         nav.style.width = "";
         nav.style.left = "";
@@ -59,20 +59,20 @@ window.addEventListener("scroll", function () {
       nav.style.opacity = 1;
       navUl.style.opacity = 1;
       navFlexCol.style.opacity = 1;
-      nav.style.padding = "0px 100px";
+      nav.style.padding = "0px 20px";
       nav.style.width = `100%`;
       if (windowWidth > 2201 ) {
-        nav.style.width = "calc(100% - 40px)%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowHeight < 2200 && windowWidth >= 2101 ) {
-        nav.style.width = "76%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowWidth < 2100 && windowWidth >= 2000 ) {
-        nav.style.width = "83.5%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowWidth < 1999 && windowWidth >= 1741) {
-        nav.style.width = "88.5%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowWidth < 1740 && windowWidth >= 1681){
-        nav.style.width = "87.8%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowWidth < 1680 && windowWidth >= 1365){
-        nav.style.width = "85%";
+        nav.style.width = "calc(100% - 40px)";
       }else if (windowWidth > 1364 && windowWidth <= 1490) {
         nav.style.top = "30px";
         nav.style.marginLeft = "calc(40px - 40vw)";
