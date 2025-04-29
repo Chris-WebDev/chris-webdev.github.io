@@ -18,7 +18,7 @@ nav.scrolled {
     position: fixed;
     flex-wrap: wrap;
     align-content: center;
-    height: 40px;
+    height: 60px;
     top: 15px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50.3%); /* Adjust for the element's width */
@@ -52,6 +52,8 @@ nav li {
     justify-content: space-between;
     align-items: end;
     text-align: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 nav a {
     width: 100%;
