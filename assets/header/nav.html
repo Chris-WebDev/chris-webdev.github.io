@@ -3,7 +3,7 @@
     <img src="https://chris-webdev.github.io/uploads/images/icon/main-logo.png" alt="CWT | Developer" id="nav-logo">
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="flex-col">
-        <h6 class="krona-one-regular">GITHUB</h6>
+        <p>Chris-Webtech Presents | 2025 Github Pages</p>
         <div class="btn-row" style="flex-direction: row; align-items: flex-start;">
             <p style="color: #720000">Github</p>
             <label class="switch" style="margin-bottom: 10px;">
@@ -87,26 +87,28 @@
                     <img id="project-hover-image" src="" alt="Project Preview">
                 </div>
             </li>
-            <li><button onclick="window.open('https://millerchristopher.net/', '_blank')" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer;">
-                Go to WordPress
+            <li><button onclick="window.open('https://millerchristopher.net/', '_blank')" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #720000; color: white; cursor: pointer;">
+                Portfolio
             </button></li>
         </ul>
     </div>
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const inputToggle = document.getElementById("input");
-        inputToggle.addEventListener("change", function () {
-            if (this.checked) {
-                setTimeout(() => {
-                    window.open("https://chris-webdev.github.io/", "_blank");
-                    this.checked = true; // Recheck the toggle after redirect
-                }, 500); // Adjust delay as needed
-            } else {
-                // You can add functionality here if you want something to happen when the toggle is unchecked on the GitHub version.
-                // For now, it will just stay unchecked.
-            }
-        });
+  document.addEventListener("DOMContentLoaded", function() {
+    const inputToggle = document.getElementById("input");
+    const linkToOpen = "https://millerchristopher.net/"; // Replace with your WordPress URL
+
+    inputToggle.addEventListener("change", function () {
+      if (!this.checked) {
+        setTimeout(() => {
+          window.open(linkToOpen, "_blank");
+          // Optionally, you might want to re-check the box after opening the link
+          // this.checked = true;
+        }, 500);
+      } else {
+        // Optional: Add functionality here if you want something to happen when the toggle is checked.
+      }
     });
+  });
 </script>
