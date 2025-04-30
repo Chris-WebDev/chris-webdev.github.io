@@ -1,27 +1,26 @@
-/* Navigation Styles */
 nav {
     position: relative;
     background-color: #121212;
     height: 150px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 100px 0px 100px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-content: center;
+		align-content: center;
+    flex-wrap: wrap;
     box-shadow: 0px 0px 8px 0px #ffffff80;
     font-size: 14px;
     z-index: 10;
     transition: background-color 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, height 0.3s ease-in, margin-left 0.3s ease-in, width 0.3s ease-in, border 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, transform 0.3s ease-in-out; /* Added transform transition */
 }
+
 /* Navigation Styles After Scrolling */
 nav.scrolled {
     position: fixed;
     flex-wrap: wrap;
     align-content: center;
-    height: 60px;
     top: 15px;
     left: 50%; /* Center horizontally */
-    transform: translateX(-50.3%); /* Adjust for the element's width */
+    transform: translateX(-50%); /* Adjust for the element's width */
     margin-left: 0; /* Reset margin-left */
     color: white;
     background-color: #12121271;
@@ -35,24 +34,24 @@ nav.scrolled {
 }
 nav ul {
     list-style: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Krona One';
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-between;
-    padding-left: 20px;
+    height: 40px;
+    width: 100%;
+	justify-content: end;
+    gap: 20px;
+    margin-right: -20px;
 }
 nav li {
-    width: 25%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
     text-align: center;
-    flex-wrap: wrap;
-    align-content: center;
 }
 nav a {
     width: 100%;
@@ -70,7 +69,7 @@ nav .flex-col {
     align-content: end;
 }
 nav .flex-col p {
-    font-size: small;
+    font-size: smaller;
     text-align: right;
 }
 #nav-holder > nav > div:nth-child(4){
