@@ -44,7 +44,6 @@ nav ul {
     width: 100%;
 	justify-content: end;
     gap: 20px;
-    margin-right: -20px;
 }
 nav li {
     height: 100%;
