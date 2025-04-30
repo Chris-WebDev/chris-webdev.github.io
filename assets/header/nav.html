@@ -6,7 +6,7 @@
         <p>Chris-Webtech Presents | 2025 Github Pages</p>
     </div>
     <div class="flex-col">
-        <div class="btn-row" style="flex-direction: row; align-items: flex-start;">
+        <div class="btn-row" style="display: flex; flex-direction: row; justify-content: end; gap: 20px; padding: 10px 0px">
         <p>WordPress</p>
             <label class="switch" style="margin-bottom: 10px;">
                 <input id="input" type="checkbox" checked="darkTheme" />
@@ -74,22 +74,28 @@
                 </div>
             </label>
             <p style="color: #720000">Github</p>
-            <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const inputToggle = document.getElementById("input");
-    const linkToOpen = "https://millerchristopher.net/"; 
-
-    inputToggle.addEventListener("change", function () {
-      if (!this.checked) {
-        setTimeout(() => {
-          window.open(linkToOpen, "_blank");
-        }, 500);
-      } else {
-
-      }
-    });
-  });
-</script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const inputToggle = document.getElementById("input");
+            const linkToOpen = "https://millerchristopher.net/";
+        
+            console.log("Script loaded."); // Check if the script is running
+        
+            inputToggle.addEventListener("change", function () {
+              console.log("Checkbox state changed. Checked:", this.checked); // Log the state
+        
+              if (!this.checked) {
+                console.log("Checkbox is now unchecked. Opening link:", linkToOpen);
+                setTimeout(() => {
+                  console.log("Timeout finished. Opening window.");
+                  window.open(linkToOpen, "_blank");
+                }, 500);
+              } else {
+                console.log("Checkbox is checked. Doing nothing.");
+              }
+            });
+          });
+        </script>
         </div>
         <ul class="krona-one-regular">
             <li><a href="https://chris-webdev.github.io/">Home</a></li>
