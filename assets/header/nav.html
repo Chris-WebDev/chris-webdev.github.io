@@ -4,8 +4,10 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="flex-col">
         <p>Chris-Webtech Presents | 2025 Github Pages</p>
+    </div>
+    <div class="flex-col">
         <div class="btn-row" style="flex-direction: row; align-items: flex-start;">
-            <p style="color: #720000">Github</p>
+        <p>WordPress</p>
             <label class="switch" style="margin-bottom: 10px;">
                 <input id="input" type="checkbox" checked="darkTheme" />
                 <div class="slider round">
@@ -71,11 +73,24 @@
                     </div>
                 </div>
             </label>
-            <p>WordPress</p>
+            <p style="color: #720000">Github</p>
+            <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const inputToggle = document.getElementById("input");
+    const linkToOpen = "https://millerchristopher.net/"; 
+
+    inputToggle.addEventListener("change", function () {
+      if (!this.checked) {
+        setTimeout(() => {
+          window.open(linkToOpen, "_blank");
+        }, 500);
+      } else {
+
+      }
+    });
+  });
+</script>
         </div>
-    </div>
-    <div class="flex-col">
-        <p>Chris-Webtech Presents | 2025 Github Pages</p>
         <ul class="krona-one-regular">
             <li><a href="https://chris-webdev.github.io/">Home</a></li>
             <li><a href="https://chris-webdev.github.io/about.html">About</a></li>
@@ -93,22 +108,3 @@
         </ul>
     </div>
 </nav>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const inputToggle = document.getElementById("input");
-    const linkToOpen = "https://millerchristopher.net/"; // Replace with your WordPress URL
-
-    inputToggle.addEventListener("change", function () {
-      if (!this.checked) {
-        setTimeout(() => {
-          window.open(linkToOpen, "_blank");
-          // Optionally, you might want to re-check the box after opening the link
-          // this.checked = true;
-        }, 500);
-      } else {
-        // Optional: Add functionality here if you want something to happen when the toggle is checked.
-      }
-    });
-  });
-</script>
