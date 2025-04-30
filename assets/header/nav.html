@@ -4,7 +4,8 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="flex-col">
         <h6 class="krona-one-regular">GITHUB</h6>
-        <div class="btn-row" style="flex-direction: column; align-items: flex-start;">
+        <div class="btn-row" style="flex-direction: row; align-items: flex-start;">
+            <p style="color: #720000">Github</p>
             <label class="switch" style="margin-bottom: 10px;">
                 <input id="input" type="checkbox" checked="darkTheme" />
                 <div class="slider round">
@@ -70,9 +71,7 @@
                     </div>
                 </div>
             </label>
-            <button onclick="window.open('https://millerchristopher.net/', '_blank')" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer;">
-                Go to WordPress
-            </button>
+            <p>WordPress</p>
         </div>
     </div>
     <div class="flex-col">
@@ -88,7 +87,9 @@
                     <img id="project-hover-image" src="" alt="Project Preview">
                 </div>
             </li>
-            <li><a href="https://christophernmiller.wixsite.com/chris-webtech" target="_blank">Blog</a></li>
+            <li><button onclick="window.open('https://millerchristopher.net/', '_blank')" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer;">
+                Go to WordPress
+            </button></li>
         </ul>
     </div>
 </nav>
