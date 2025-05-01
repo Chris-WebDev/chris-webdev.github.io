@@ -63,7 +63,9 @@ a{text-decoration: none; color: #fff;}
     font-weight: 1 1000; /* Supports a range of weights */
     font-style: normal; 
 }
-
+#logo{
+    display: none;
+}
 .roboto {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
