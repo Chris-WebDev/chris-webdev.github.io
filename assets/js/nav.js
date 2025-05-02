@@ -34,7 +34,6 @@ window.addEventListener("scroll", function () {
       nav.style.opacity = 1;
       navUl.style.opacity = 1;
       navFlexCol.style.opacity = 1;
-      nav.style.width = "calc(100% - 40px)";
       if (windowWidth > 1364) {
         nav.style.width = "";
         nav.style.left = "";
