@@ -326,10 +326,6 @@ nav {
     gap: 20px;
   }
 
-  #nav-logo {
-    margin-right: auto;
-  }
-
   .scrolled #nav-logo {
     display: block;
     margin-right: auto;
