@@ -52,7 +52,8 @@ window.addEventListener("scroll", function () {
       nav.classList.add("scrolled");
       nav.classList.remove("shrinking");
       nav.style.position = "fixed";
-      nav.style.top = "50px";
+      nav.style.top = "20px";
+      nav.style.height = "90px";
       nav.style.left = "50%";
       nav.style.marginLeft = `calc(-40vw + 20px)`;
       nav.style.opacity = 1;
