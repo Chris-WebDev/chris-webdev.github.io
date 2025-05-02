@@ -252,20 +252,6 @@ div.btn-row {
 #nav-holder > nav > button{display: none;}
 
 @media (max-width: 1179px) {
-/* --- Mobile Menu Styles --- */
-.hamburger {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
-
 .nav-content {
   display: flex;
   flex-direction: column;
@@ -280,13 +266,6 @@ div.btn-row {
   justify-content: ;
   z-index: 1000;
   padding: 20px
-}
-
-.nav-content.open {
-  box-shadow: white 0px 0px 25px;
-  top: -179px;
-  scroll-behavior: none;
-  touch-action:;
 }
 
 nav {
@@ -314,11 +293,6 @@ nav {
 }
 
 @media (max-width: 1179px) {
-  .hamburger {
-    display: block;
-    top: 40px
-  }
-
    nav {
     flex-direction: column;
     align-items: center;
