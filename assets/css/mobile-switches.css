@@ -1,9 +1,4 @@
 @media (min-width: 1901px) {
-    nav {
-        width: "";
-        transform: "";
-        padding: "";
-    }  
     #wrapper .p-hero {
             width: 100vw;
             min-height: 100vh;
@@ -29,10 +24,6 @@
     #threeCanvas {
         right: -50px;
         max-width: 98%;
-    }
-    nav {
-        top: auto;
-        padding: 0px 100px;
     }
     nav.scrolled {
         width: auto;
@@ -99,23 +90,6 @@
         left: 30px;
         top: 0px
     }
-    #nav-holder > nav {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin-left: 0px;
-        opacity: 1;
-        padding: 0px 20px;
-    }
-    nav.krona-one-regular {
-        font-size: 1.5rem;
-    }    /* nav.css Style switches */
-    .flex-col {width: 39%}
-    nav {flex-wrap: nowrap;}
-    nav .scrolled {
-        transform: translateX(-56%);
-        width: 75%;
-    }  
     #right-cntrl {
         left: 75px;
         bottom: 71px;
@@ -136,44 +110,7 @@
         max-width: "";
         max-height: "";
     }
-    nav {
-        flex-wrap: wrap;
-        /* width: 75%; */
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        padding: 20px;
-    }
-    nav .flex-col p {
-        font-size: small;
-        text-align: center;
-    }
-    nav .flex-col {
-        height: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-content: center;
-    }
     .btn-row { display: none;}
-    nav.scrolled {
-        position: fixed;
-        top: 0px;
-        /* left: 50%; */
-        /* transform: translateX(-50%) scale(1); */
-        /* margin-left: 0px; */
-        /* width: calc(100% - 312px); */
-        opacity: 1;
-    }
-    .scrolled #nav-logo, #nav-holder > nav > div:nth-child(4) {
-        display: none;
-    }
-    nav.krona-one-regular {
-        font-size: 1.5rem;
-    }
     #wrapper {
         width: calc(100% - 125px);
         padding: 0px 20px;
@@ -185,11 +122,6 @@
         flex-direction: column;
         width: auto;
     }
-    nav {flex-wrap: nowrap;}
-    nav .scrolled {
-        transform: translateX(-56%);
-        width: 75%;
-    }  
     #right-cntrl {
         left: 75px;
         bottom: 71px;
