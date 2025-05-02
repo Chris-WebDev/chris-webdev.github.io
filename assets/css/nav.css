@@ -324,14 +324,6 @@ nav {
     align-items: flex-start;
   }
 
-  nav .flex-col {
-    display: none;
-  }
-
-  nav ul {
-    display: none;
-  }
-
   #nav-logo {
     margin-right: auto;
   }
