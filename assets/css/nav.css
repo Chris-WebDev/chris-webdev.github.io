@@ -1,356 +1,198 @@
-<style>
 nav {
-  position: relative;
-  background-color: #121212;
-  height: 150px;
-  padding: 0px 20px 0px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
-  box-shadow: 0px 0px 8px 0px #ffffff80;
-  font-size: 14px;
-  z-index: 10;
-  transition: background-color 0.3s ease-in,
-              padding 0.3s ease-in,
-              box-shadow 0.3s ease-in,
-              height 0.3s ease-in,
-              margin-left 0.3s ease-in,
-              width 0.3s ease-in,
-              border 0.3s ease-in,
-              border-radius 0.3s ease-in,
-              opacity 0.3s ease-out,
-              transform 0.3s ease-in-out,
-              top 0.3s ease-in; /* Include top in the transition */
+    position: relative;
+    background-color: #121212;
+    height: 150px;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+		align-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 8px 0px #ffffff80;
+    font-size: 14px;
+    z-index: 10;
+    transition: background-color 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, height 0.3s ease-in, margin-left 0.3s ease-in, width 0.3s ease-in, border 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, transform 0.3s ease-in-out; /* Added transform transition */
 }
 
 /* Navigation Styles After Scrolling */
 nav.scrolled {
-  position: fixed;
-  flex-wrap: wrap;
-  align-content: center;
-  top: -100px; /* Start off-screen */
-  left: 50%;
-  transform: translateX(-50%);
-  margin-left: 0;
-  color: white;
-  background-color: #12121271;
-  border: 2px solid white;
-  padding: 20px 50px;
-  box-shadow: 0px 4px 8px 0px #00000050;
-  z-index: 1000;
-  border-radius: 5px;
-  opacity: 1;
-  transition: height 0.3s ease-in, width 0.3s ease-in, background-color 0.3s ease-in, border 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, top 0.3s ease-in; /* Include top */
+    position: fixed;
+    flex-wrap: wrap;
+    align-content: center;
+    top: 15px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for the element's width */
+    margin-left: 0; /* Reset margin-left */
+    color: white;
+    background-color: #12121271;
+    border: 2px solid white;
+    padding: 20px 50px;
+    box-shadow: 0px 4px 8px 0px #00000050;
+    z-index: 1000;
+    border-radius: 5px;
+    opacity: 1;
+    transition: height 0.3s ease-in, width 0.3s ease-in, background-color 0.3s ease-in, border 0.3s ease-in, padding 0.3s ease-in, box-shadow 0.3s ease-in, border-radius 0.3s ease-in, opacity 0.3s ease-out, top 0.3s ease-in;
 }
-
 nav ul {
-  list-style: none;
-  font-size: 14px;
-  font-family: 'Krona One';
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-content: center;
-  height: 40px;
-  width: 100%;
-  justify-content: end;
-  gap: 20px;
+    list-style: none;
+    font-size: 14px;
+    font-family: 'Krona One';
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 40px;
+    width: 100%;
+	justify-content: end;
+    gap: 20px;
 }
-
 nav li {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    text-align: center;
 }
-
 nav a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  font-size: 14px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 14px;
 }
 
 nav .flex-col {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: end;
-}
-
-nav .flex-col p {
-  font-size: smaller;
-  text-align: right;
-}
-
-#nav-holder>nav>div:nth-child(4) {
-  margin-left: calc(30% - 239px);
-  text-align: center;
-}
-
-nav ul a:hover {
-  color: #720000;
-}
-
-div a:hover {
-  color: #720000;
-}
-
-nav ul a:hover::before {
-  left: 0;
-}
-
-nav ul a:hover::after {
-  width: 100%;
-}
-
-#nav-logo {
-  display: flex;
-  align-self: center;
-  height: 80%;
-}
-
-.scrolled #nav-logo {
-  height: 90%;
-  background-size: 90px;
-  margin-right: 100px;
-}
-
-nav.scrolled.shrinking {
-  opacity: 0;
-}
-
-nav.scrolled .flex-col p,
-nav.scrolled h6 {
-  display: none;
-}
-
-nav.scrolled .flex-col {
-  justify-content: center;
-}
-
-nav.scrolled ul {
-  width: 100%
-}
-
-nav>div {
-  width: 30%
-}
-
-nav h1 {
-  text-align: center;
-}
-
-#nav-holder>nav>button {
-  display: none;
-}
-
-@media (min-width: 1901px) {
-  nav {
-    width: "";
-    transform: "";
-    padding: "";
-  }
-
-}
-
-@media (max-width: 1179px) {
-  nav {
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 20px;
-  }
-
-  nav .flex-col p {
-    font-size: small;
-    text-align: center;
-  }
-
-  nav .flex-col {
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-content: center;
-  }
+    align-content: end;
+}
+nav .flex-col p {
+    font-size: smaller;
+    text-align: right;
+}
+#nav-holder > nav > div:nth-child(4){
+    margin-left: calc(30% - 239px);
+    text-align: center;
+}
 
-  nav.scrolled {
-    position: fixed;
-    top: 0px;
-    opacity: 1;
-  }
+nav ul a:hover {
+    color: #720000; /* Changes text color on hover */
+}
+div a:hover {
+    color: #720000; /* Changes text color on hover */
+}
 
-  .scrolled #nav-logo,
-  #nav-holder>nav>div:nth-child(4) {
-    display: none;
-  }
+nav ul a:hover::before {
+    left: 0; /* Sweeps the background from left to right */
+}
 
-  nav.krona-one-regular {
-    font-size: 1.5rem;
-  }
+nav ul a:hover::after {
+    width: 100%; /* Makes the underline slide in from the left */
+}
 
-  .flex-col {
+#nav-logo {
     display: flex;
-    flex-direction: column;
-    width: auto;
-  }
-
-  nav {
-    flex-wrap: nowrap;
-  }
-
-  nav .scrolled {
-    transform: translateX(-56%);
-    width: 90;
-  }
+    align-self: center;
+    height: 80%;
 }
-
-/* --- Mobile Menu Styles --- */
-.hamburger {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
+.scrolled #nav-logo {
+    height: 90%;
+    background-size: 90px;
+    margin-right: 100px;
 }
-
-.nav-content {
-  display: flex;
-  flex-direction: column;
-  background-color: #121212;
-  position: fixed;
-  top: calc(-100% - 20px);
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transition: top 0.3s ease-in-out;
-  align-items: ;
-  justify-content: ;
-  z-index: 1000;
-  padding: 20px
+nav.scrolled.shrinking {
+    opacity: 0; /* Fade out as it shrinks */
 }
-
-.nav-content.open {
-  box-shadow: white 0px 0px 25px;
-  top: -179px;
-  scroll-behavior: none;
-  touch-action:;
-}
-
-nav {
-  transition: background-color 0.3s ease-in,
-              padding 0.3s ease-in,
-              box-shadow 0.3s ease-in,
-              height 0.3s ease-in,
-              margin-left 0.3s ease-in,
-              width 0.3s ease-in,
-              border 0.3s ease-in,
-              border-radius 0.3s ease-in,
-              opacity 0.3s ease-out,
-              transform 0.3s ease-in-out,
-              top 0.3s ease-in; /* Keep top for scroll */
-}
-
-.nav-content ul {
-  align-items: center;
-  gap: 40px;
-}
-
-.nav-content ul li {
-  width: 100%;
-  text-align: center;
-}
-
-@media (max-width: 1179px) {
-  .hamburger {
-    display: block;
-    top: 40px
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav .flex-col {
+nav.scrolled .flex-col p, nav.scrolled h6 {
     display: none;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  #nav-logo {
-    margin-right: auto;
-  }
-
-  .scrolled #nav-logo {
-    display: block;
-    margin-right: auto;
-  }
-
-  nav.scrolled {
-    padding: 10px 20px;
-  }
 }
+nav.scrolled .flex-col {justify-content: center;}
+nav.scrolled ul{ width: 100%}
+nav > div{ width: 30%}
+nav h1{text-align: center;}
 
-/* --- Show content on large screens --- */
-@media (min-width: 1180px) {
-  .nav-content {
-    display: flex !important;
-    position: relative;
-    top: auto;
-    left: auto;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-  }
+#nav-holder > nav > button{display: none;}
 
-  nav ul {
-    display: flex !important;
-  }
-
-  nav .flex-col {
-    display: flex;
-  }
+@media (min-width: 1901px) {
+    nav {
+        width: "";
+        transform: "";
+        padding: "";
+    }  
 }
-
-/* --- Ensure content is visible when mobile menu is open --- */
-@media (max-width: 1179px) {
-  .nav-content {
-    display: flex; /* Ensure it is displayed when open */
-  }
-
-  .nav-content.open ul,
-  .nav-content.open .flex-col {
-    display: flex !important; /* Make sure these are visible when menu is open */
-    flex-direction: column;  /* Ensure correct layout in mobile */
-    align-items: center;
-  }
-
-  .nav-content.open .flex-col {
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (min-width: 1367px) and (max-width: 1381){
+    nav {
+        top: auto;
+        padding: 0px 20
+    }
+    nav.scrolled {
+        width: auto;
+        padding: 0px 100px;
+    }
 }
-</style>
+@media (min-width: 1180px) and (max-width: 1367px) { 
+    #nav-holder > nav {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-left: 0px;
+        opacity: 1;
+        padding: 0px 20px;
+    }
+    nav.krona-one-regular {
+        font-size: 1.5rem;
+    }    /* nav.css Style switches */
+    .flex-col {width: 39%}
+    nav {flex-wrap: nowrap;}
+    nav .scrolled {
+        transform: translateX(-56%);
+        width: 75%;
+    }
+}
+@media (max-width: 1179px) { 
+    nav {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 20px;
+    }
+    nav .flex-col p {
+        font-size: small;
+        text-align: center;
+    }
+    nav .flex-col {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    nav.scrolled {
+        position: fixed;
+        top: 0px;
+        opacity: 1;
+    }
+    .scrolled #nav-logo, #nav-holder > nav > div:nth-child(4) {
+        display: none;
+    }
+    nav.krona-one-regular {
+        font-size: 1.5rem;
+    }
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    nav {flex-wrap: nowrap;}
+    nav .scrolled {
+        transform: translateX(-56%);
+        width: 90;
+    }  
+}
