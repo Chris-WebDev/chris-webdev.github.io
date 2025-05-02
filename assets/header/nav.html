@@ -1,26 +1,28 @@
 <nav>
-  <link rel="stylesheet" href="https://chris-webdev.github.io/assets/header/riccardo-btn.css" style="display: none;">
-  <img src="https://chris-webdev.github.io/uploads/images/icon/main-logo.png" alt="CWT | Developer" id="nav-logo">
-  <button class="hamburger" id="hamburger-btn" onclick="toggleMenu()">☰</button>
-  <div class="nav-content" id="nav-content">
+    <link rel="stylesheet" href="https://chris-webdev.github.io/assets/header/riccardo-btn.css" style="display: none;">
+    <img src="https://chris-webdev.github.io/uploads/images/icon/main-logo.png" alt="CWT | Developer" id="nav-logo">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="flex-col">
-      <p>Chris-Webtech Presents | Christopher Miller's 2025 Portfolio</p>
+        <p>Chris-Webtech Presents | 2025 Github Pages</p>
     </div>
     <div class="flex-col">
-      <div class="btn-row" style=" width: calc(100% - 40px); display: flex; flex-direction: row; justify-content: srart; gap: 20px; padding: 10px 0px">
-        <p style="color: #720000">WORDPRESS</p>
-      </div>
-      <ul class="krona-one-regular">
-        <li><a href="https://millerchristopher.net/">Home</a></li>
-        <li><a href="https://chris-webdev.github.io">My Github</a></li>
-        <li><a href="https://millerchristopher.net/about">About Developer</a></li>
-        <li>
-          <button onclick="window.open('https://millerchristopher.net/contact')" style="padding: 10px 20px; border: none; border-radius: 5px; font-size: 14px; background-color: #720000; color: white; cursor: pointer;">
-            Contact Dev
-          </button>
-        </li>
-      </ul>
+        <div class="btn-row" style="display: flex; flex-direction: row; justify-content: end; gap: 20px; padding: 10px 0px">
+        <p>WordPress</p>
+        </div>
+        <ul class="krona-one-regular">
+            <li><a href="https://chris-webdev.github.io/">Home</a></li>
+            <li><a href="https://chris-webdev.github.io/about.html">About</a></li>
+            <li class="dropdown">
+                <a href="https://chris-webdev.github.io/web-projects.html">Work</a>
+                <div class="dropdown-content" id="project-dropdown">
+                </div>
+                <div class="image-container">
+                    <img id="project-hover-image" src="" alt="Project Preview">
+                </div>
+            </li>
+            <li><button onclick="window.open('https://millerchristopher.net/', '_blank')" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #720000; color: white; cursor: pointer;">
+                Portfolio
+            </button></li>
+        </ul>
     </div>
-  </div>
 </nav>
-<style>
