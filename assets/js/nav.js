@@ -29,6 +29,7 @@ window.addEventListener("scroll", function () {
       nav.style.position = "relative";
       nav.style.top = "auto";
       nav.style.left = "-98px";
+      nav.style.height = "fit-content";
       nav.style.transform = `translateX(0pc) scale(1)`;
       nav.style.marginLeft = `calc(-40vw + 20px)`;
       nav.style.opacity = 1;
