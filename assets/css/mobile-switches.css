@@ -1,4 +1,8 @@
 @media (min-width: 1901px) {
+    #wrapper > section.fl-w-bck.hp-hero > div > spline-viewer {
+        margin-left: 50%;
+        margin-top: -34%;
+    }
     #wrapper .p-hero {
             width: 100vw;
             min-height: 100vh;
